@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUCE机器人交互测试平台</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部标题和状态栏 -->
+        <header class="header">
+            <h1>🤖 BRUCE机器人交互测试平台</h1>
+            <div class="status-bar">
+                <div class="status-item" id="status-real">
+                    <span class="status-dot offline"></span>
+                    <span>实机: 离线</span>
+                </div>
+                <div class="status-item" id="status-gazebo">
+                    <span class="status-dot offline"></span>
+                    <span>Gazebo: 离线</span>
+                </div>
+                <div class="status-item">
+                    <span id="connection-time">--:--:--</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- 左侧控制面板 -->
+            <div class="control-panel">
+                <!-- 平台控制 -->
+                <div class="section">
+                    <h3>平台控制</h3>
+                    <div class="platform-controls">
+                        <button class="btn btn-primary" onclick="connectPlatform('real_robot')">
+                            连接实机
+                        </button>
+                        <button class="btn btn-primary" onclick="connectPlatform('gazebo')">
+                            连接Gazebo
+                        </button>
+                        <button class="btn btn-danger" onclick="disconnectAll()">
+                            断开所有连接
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 编译和初始化 -->
+                <div class="section">
+                    <h3>编译和初始化</h3>
+                    <div class="command-buttons">
+                        <button class="btn btn-secondary" onclick="executeCommand('compile_check')">
+                            预编译脚本
+                        </button>
+                        <button class="btn btn-secondary" onclick="executeCommand('initialize')">
+                            初始化机器人
+                        </button>
+                        <button class="btn btn-warning" onclick="startGazebo()">
+                            启动Gazebo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 测试控制 -->
+                <div class="section">
+                    <h3>测试控制</h3>
+                    <select class="test-select" id="test-select">
+                        <option value="">选择测试用例...</option>
+                        <option value="walking_test">行走测试</option>
+                        <option value="joint_mapping">关节顺序测试</option>
+                        <option value="initialization">初始化测试</option>
+                    </select>
+                    
+                    <div class="platform-selection">
+                        <label>
+                            <input type="checkbox" id="platform-real" checked> 实机
+                        </label>
+                        <label>
+                            <input type="checkbox" id="platform-gazebo" checked> Gazebo
+                        </label>
+                    </div>
+                    
+                    <div class="test-controls">
+                        <button class="btn btn-success" onclick="startTest()" id="start-test-btn">
+                            ▶ 开始测试
+                        </button>
+                        <button class="btn btn-danger" onclick="stopTest()" id="stop-test-btn" disabled>
+                            ⏹ 停止测试
+                        </button>
+                        <button class="btn btn-info" onclick="exportResults()">
+                            📥 导出结果
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 实时日志 -->
+                <div class="section">
+                    <h3>实时日志</h3>
+                    <div class="log-container" id="log-container">
+                        <div class="log-entry">欢迎使用BRUCE机器人测试平台</div>
+                    </div>
+                    <div class="log-controls">
+                        <button class="btn btn-small" onclick="clearLogs()">清空日志</button>
+                        <button class="btn btn-small" onclick="toggleLogs()">暂停/继续</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中间可视化区域 -->
+            <div class="visualization-panel">
+                <!-- 数据图表 -->
+                <div class="chart-section">
+                    <h3>测试数据对比</h3>
+                    <div id="comparison-chart" style="width: 100%; height: 300px;"></div>
+                </div>
+                
+                <!-- 平台结果 -->
+                <div class="results-grid">
+                    <div class="result-card" id="result-card-real">
+                        <h4>实机测试结果</h4>
+                        <div class="result-content" id="result-real">
+                            <div class="placeholder">等待测试...</div>
+                        </div>
+                    </div>
+                    <div class="result-card" id="result-card-gazebo">
+                        <h4>Gazebo测试结果</h4>
+                        <div class="result-content" id="result-gazebo">
+                            <div class="placeholder">等待测试...</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 详细结果 -->
+                <div class="details-section">
+                    <h3>详细结果</h3>
+                    <div class="details-container">
+                        <pre id="detailed-results">选择测试以查看详细结果...</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部状态栏 -->
+        <footer class="footer">
+            <div class="footer-left">
+                <span id="current-test">当前测试: 无</span>
+                <span id="test-progress"></span>
+            </div>
+            <div class="footer-right">
+                <span id="last-update">最后更新: --:--:--</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

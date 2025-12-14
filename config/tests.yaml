@@ -1,0 +1,42 @@
+# 测试用例配置
+test_cases:
+  compile_check:
+    name: "编译检查"
+    description: "预编译所有Python脚本"
+    commands:
+      - "python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT"
+      - "python3 -m Library.ROBOT_MODEL.BRUCE_KINEMATICS_AOT"
+      - "python3 -m Library.STATE_ESTIMATION.BRUCE_ESTIMATION_AOT"
+      
+  initialization:
+    name: "初始化测试"
+    description: "初始化机器人到站立姿态"
+    commands:
+      - "python3 -m Startups.memory_manager"
+      - "python3 -m Startups.run_dxl"
+      - "python3 -m Startups.run_bear"
+      - "python3 -m Play.initialize"
+      
+  walking_test:
+    name: "行走测试"
+    description: "执行基础行走动作"
+    steps:
+      - name: "启动控制线程"
+        commands:
+          - "python3 -m Startups.run_sense"
+          - "python3 -m Startups.run_estimation"
+      - name: "启动行走控制"
+        commands:
+          - "python3 -m Play.Walking.low_level"
+          - "python3 -m Play.Walking.high_level"
+          - "python3 -m Play.Walking.top_level"
+    data_collection:
+      metrics: ["joint_positions", "body_velocity", "joint_velocity"]
+      duration: 10  # 秒
+      
+  joint_mapping:
+    name: "关节顺序测试"
+    description: "验证仿真与实机关节顺序一致性"
+    parameters:
+      joint_angles: [0, 0.1, -0.1, 0.05, -0.05]
+      duration: 3.0
