@@ -4,7 +4,7 @@
 
 ```bash
 # 克隆项目
-git clone <repository-url>
+git clone https://github.com/Yimeng705/bruce-web-test-platform
 cd bruce-web-test-platform
 ```
 

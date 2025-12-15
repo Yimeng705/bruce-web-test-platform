@@ -6,7 +6,14 @@ import asyncio
 from typing import Dict, List
 import json
 
-from backend.api import real_robot, gazebo, test, data
+# 导入API路由
+try:
+    from backend.api import real_robot, gazebo, test, data
+except ImportError:
+    # 如果导入失败，尝试相对导入
+    import sys
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+    from api import real_robot, gazebo, test, data
 from backend.adapters.real_robot_adapter import RealRobotAdapter
 from backend.adapters.gazebo_adapter import GazeboAdapter
 
@@ -44,6 +51,43 @@ app.include_router(data.router, prefix="/api/data")
 platform_adapters = {}
 active_tests = {}
 test_results = {}
+
+def load_platform_config() -> Dict:
+    """加载平台配置"""
+    try:
+        config_path = os.path.join("config", "platforms.yaml")
+        if not os.path.exists(config_path):
+            # 尝试相对路径
+            config_path = os.path.join(os.path.dirname(__file__), "..", "config", "platforms.yaml")
+        
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = yaml.safe_load(f)
+        
+        return config
+    except Exception as e:
+        print(f"加载配置文件失败: {e}")
+        # 返回默认配置
+        return {
+            "platforms": {
+                "real_robot": {
+                    "enabled": False,
+                    "name": "BRUCE实机",
+                    "connection": {
+                        "type": "ssh",
+                        "host": "khadas@khadas.local",
+                        "port": 22,
+                        "password": "khadas"
+                    }
+                },
+                "gazebo": {
+                    "enabled": False,
+                    "name": "Gazebo仿真",
+                    "connection": {
+                        "type": "local"
+                    }
+                }
+            }
+        }
 
 @app.on_event("startup")
 async def startup_event():
