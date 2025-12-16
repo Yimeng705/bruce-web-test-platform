@@ -17,7 +17,7 @@ class GazeboAdapter:
         self.name = config.get('name', 'Gazebo仿真')
         self.is_connected = False
         self.last_update = None
-        self.simulation_mode = config.get('simulation_mode', True)  # 默认使用模拟模式
+        self.simulation_mode = config.get('simulation_mode', False)  # 默认不使用模拟模式
         self.gazebo_process = None
         
         # 路径配置

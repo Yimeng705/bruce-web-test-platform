@@ -1,6 +1,7 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from datetime import datetime
 import yaml
 import asyncio
 from typing import Dict, List
@@ -95,13 +96,17 @@ async def startup_event():
     print("🚀 启动BRUCE机器人测试平台...")
     
     # 加载配置
-    with open("config/platforms.yaml", "r", encoding="utf-8") as f:
-        config = yaml.safe_load(f)
+    try:
+        config = load_platform_config()
+        platforms_config = config.get("platforms", {})
+    except Exception as e:
+        print(f"❌ 加载配置失败: {e}")
+        return
     
     # 初始化实机适配器
-    if config["platforms"]["real_robot"]["enabled"]:
+    if platforms_config.get("real_robot", {}).get("enabled", False):
         try:
-            real_adapter = RealRobotAdapter(config["platforms"]["real_robot"])
+            real_adapter = RealRobotAdapter(platforms_config["real_robot"])
             if await real_adapter.connect():
                 platform_adapters["real_robot"] = real_adapter
                 print("✅ 实机适配器已连接")
@@ -109,9 +114,9 @@ async def startup_event():
             print(f"❌ 实机适配器连接失败: {e}")
     
     # 初始化Gazebo适配器
-    if config["platforms"]["gazebo"]["enabled"]:
+    if platforms_config.get("gazebo", {}).get("enabled", False):
         try:
-            gazebo_adapter = GazeboAdapter(config["platforms"]["gazebo"])
+            gazebo_adapter = GazeboAdapter(platforms_config["gazebo"])
             if await gazebo_adapter.connect():
                 platform_adapters["gazebo"] = gazebo_adapter
                 print("✅ Gazebo适配器已连接")
@@ -143,13 +148,14 @@ async def get_status():
                 "name": adapter.name,
                 "connected": adapter.is_connected,
                 "status": platform_status,
-                "last_update": adapter.last_update
+                "last_update": adapter.last_update.isoformat() if adapter.last_update else None
             }
         except Exception as e:
             status[name] = {
                 "name": adapter.name,
                 "connected": False,
-                "error": str(e)
+                "error": str(e),
+                "last_update": None
             }
     return status
 
@@ -170,10 +176,17 @@ async def websocket_endpoint(websocket: WebSocket):
                 # 定期发送状态更新
                 async def send_status_updates():
                     while True:
-                        status = await get_status()
+                        status_data = await get_status()
+                        # 处理datetime序列化问题
+                        serialized_status = {}
+                        for key, value in status_data.items():
+                            serialized_status[key] = value
+                            if isinstance(value.get("last_update"), datetime):
+                                serialized_status[key]["last_update"] = value["last_update"].isoformat()
+                        
                         await websocket.send_json({
                             "type": "status_update",
-                            "data": status,
+                            "data": serialized_status,
                             "timestamp": asyncio.get_event_loop().time()
                         })
                         await asyncio.sleep(1)  # 每秒更新一次

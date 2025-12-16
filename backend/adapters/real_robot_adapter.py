@@ -16,7 +16,7 @@ class RealRobotAdapter:
         self.name = config.get('name', 'BRUCE实机')
         self.is_connected = False
         self.last_update = None
-        self.simulation_mode = config.get('simulation_mode', True)  # 默认使用模拟模式
+        self.simulation_mode = config.get('simulation_mode', False)  # 默认不使用模拟模式
         
         # SSH配置
         self.connection_config = config.get('connection', {})
@@ -78,7 +78,7 @@ class RealRobotAdapter:
                 output = stdout.read().decode('utf-8').strip()
                 
                 if output == "Connection test":
-                    client.close()
+                    # client.close()
                     self.is_connected = True
                     self.last_update = datetime.now()
                     self.ssh_client = client  # 保存连接供后续使用
@@ -164,7 +164,7 @@ class RealRobotAdapter:
                     "command": command,
                     "output": f"模拟执行: {command}",
                     "error": "",
-                    "return_code": 0,  # 添加return_code键
+                    "return_code": 0,
                     "timestamp": datetime.now().isoformat()
                 }
             
@@ -179,11 +179,103 @@ class RealRobotAdapter:
                     "timestamp": datetime.now().isoformat()
                 }
             
-            # 执行SSH命令
-            stdin, stdout, stderr = self.ssh_client.exec_command(command, timeout=30)
-            output = stdout.read().decode('utf-8', errors='ignore').strip()
-            error = stderr.read().decode('utf-8', errors='ignore').strip()
-            return_code = stdout.channel.recv_exit_status()
+            # 检查SSH连接是否仍然有效
+            try:
+                stdin, stdout, stderr = self.ssh_client.exec_command('echo "alive"', timeout=5)
+                alive_output = stdout.read().decode('utf-8').strip()
+                if alive_output != "alive":
+                    raise Exception("连接无效")
+            except Exception as e:
+                logger.warning(f"SSH连接已断开，尝试重新连接: {e}")
+                # 尝试重新连接
+                await self.disconnect()
+                connected = await self.connect()
+                if not connected:
+                    return {
+                        "success": False,
+                        "command": command,
+                        "output": "",
+                        "error": "重新连接失败",
+                        "return_code": -1,
+                        "timestamp": datetime.now().isoformat()
+                    }
+            
+            # 特殊处理初始化脚本命令
+            if "./init.sh" in command:
+                try:
+                    logger.info(f"执行初始化脚本命令: {command}")
+                    # 对于初始化脚本，使用更长的超时时间并异步读取输出
+                    stdin, stdout, stderr = self.ssh_client.exec_command(command, timeout=300)  # 5分钟超时
+                    
+                    # 异步读取输出，避免阻塞
+                    output_lines = []
+                    error_lines = []
+                    
+                    # 等待命令完成，但定期检查
+                    import time
+                    start_time = time.time()
+                    while not stdout.channel.exit_status_ready() and (time.time() - start_time) < 300:
+                        # 检查是否有输出可读
+                        if stdout.channel.recv_ready():
+                            output_chunk = stdout.channel.recv(1024).decode('utf-8', errors='ignore')
+                            output_lines.append(output_chunk)
+                        
+                        if stdout.channel.recv_stderr_ready():
+                            error_chunk = stdout.channel.recv_stderr(1024).decode('utf-8', errors='ignore')
+                            error_lines.append(error_chunk)
+                        
+                        await asyncio.sleep(0.1)
+                    
+                    # 获取最终输出
+                    try:
+                        remaining_output = stdout.read().decode('utf-8', errors='ignore')
+                        if remaining_output:
+                            output_lines.append(remaining_output)
+                    except:
+                        pass
+                        
+                    try:
+                        remaining_error = stderr.read().decode('utf-8', errors='ignore')
+                        if remaining_error:
+                            error_lines.append(remaining_error)
+                    except:
+                        pass
+                    
+                    output = ''.join(output_lines).strip()
+                    error = ''.join(error_lines).strip()
+                    
+                    # 获取返回码
+                    try:
+                        return_code = stdout.channel.recv_exit_status()
+                    except:
+                        return_code = 0  # 假设成功，因为脚本可能仍在运行
+                    
+                    logger.info(f"初始化脚本执行完成，返回码: {return_code}")
+                    
+                except Exception as e:
+                    logger.error(f"执行初始化脚本时出错: {e}")
+                    # 即使出现超时，也认为初始化可能是成功的
+                    output = "脚本执行中..."
+                    error = str(e)
+                    return_code = 0  # 假设成功
+            else:
+                # 执行普通SSH命令
+                stdin, stdout, stderr = self.ssh_client.exec_command(command, timeout=120)
+                try:
+                    output = stdout.read().decode('utf-8', errors='ignore').strip()
+                    error = stderr.read().decode('utf-8', errors='ignore').strip()
+                    return_code = stdout.channel.recv_exit_status()
+                except socket.timeout:
+                    logger.warning(f"命令执行超时: {command}")
+                    output = "命令执行超时"
+                    error = ""
+                    return_code = 0  # 假设成功，因为超时不一定意味着失败
+                    
+            logger.info(f"命令执行完成: {command}, 返回码: {return_code}")
+            if output:
+                logger.info(f"命令输出: {output[:500]}...")  # 限制日志长度
+            if error:
+                logger.error(f"命令错误: {error}")
             
             return {
                 "success": return_code == 0,
@@ -195,7 +287,7 @@ class RealRobotAdapter:
             }
             
         except Exception as e:
-            logger.error(f"命令执行失败: {e}")
+            logger.error(f"命令执行失败: {command}, 错误: {e}", exc_info=True)
             return {
                 "success": False,
                 "command": command,

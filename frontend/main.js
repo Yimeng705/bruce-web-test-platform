@@ -415,16 +415,37 @@ class TestManager {
         this.log(`开始测试: ${testName}`, 'info');
 
         try {
-            const response = await fetch('/api/test/execute', {
+            // 首先从后端获取测试用例的完整配置
+            const testCasesResponse = await fetch('/api/test/test-cases');
+            const testCasesResult = await testCasesResponse.json();
+            
+            if (!testCasesResult.success) {
+                throw new Error('无法获取测试用例配置');
+            }
+
+            // 获取选定测试用例的配置
+            const testCases = testCasesResult.test_cases;
+            const selectedTestCase = testCases[testName];
+            
+            if (!selectedTestCase) {
+                throw new Error(`未找到测试用例: ${testName}`);
+            }
+
+            // 构建包含完整配置的测试请求
+            const testConfig = {
+                test_name: testName,
+                platforms: platforms,
+                test_id: this.currentTestId,
+                ...selectedTestCase  // 展开测试用例的配置
+            };
+
+            // 发送到正确的API端点
+            const response = await fetch('/api/real-robot/run-test', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    test_name: testName,
-                    platforms: platforms,
-                    test_id: this.currentTestId
-                })
+                body: JSON.stringify(testConfig)
             });
 
             const result = await response.json();

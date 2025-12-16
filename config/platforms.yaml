@@ -3,10 +3,12 @@ platforms:
   real_robot:
     enabled: true
     name: "BRUCE实机"
+    simulation_mode: false
     connection:
       type: "ssh"
-      host: "khadas@192.168.1.22"
+      host: "192.168.1.22"
       port: 22
+      username: "khadas"
       password: "khadas"
     paths:
       bruce_home: "/home/khadas/BRUCE/BRUCE-OP"
@@ -22,6 +24,7 @@ platforms:
   gazebo:
     enabled: true
     name: "Gazebo仿真"
+    simulation_mode: false
     connection:
       type: "local"  # 本地运行
     paths:

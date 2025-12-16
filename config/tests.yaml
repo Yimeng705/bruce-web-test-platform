@@ -4,18 +4,17 @@ test_cases:
     name: "编译检查"
     description: "预编译所有Python脚本"
     commands:
-      - "python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT"
-      - "python3 -m Library.ROBOT_MODEL.BRUCE_KINEMATICS_AOT"
-      - "python3 -m Library.STATE_ESTIMATION.BRUCE_ESTIMATION_AOT"
+      - "cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT"
+      - "cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.ROBOT_MODEL.BRUCE_KINEMATICS_AOT"
+      - "cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.STATE_ESTIMATION.BRUCE_ESTIMATION_AOT"
       
   initialization:
     name: "初始化测试"
-    description: "初始化机器人到站立姿态"
+    description: "使用init.sh脚本初始化机器人到站立姿态"
     commands:
-      - "python3 -m Startups.memory_manager"
-      - "python3 -m Startups.run_dxl"
-      - "python3 -m Startups.run_bear"
-      - "python3 -m Play.initialize"
+      - "cd /home/khadas/BRUCE/BRUCE-OP && pwd"
+      - "cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh"
+      - "cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh"
       
   walking_test:
     name: "行走测试"
@@ -23,13 +22,18 @@ test_cases:
     steps:
       - name: "启动控制线程"
         commands:
-          - "python3 -m Startups.run_sense"
-          - "python3 -m Startups.run_estimation"
+          - "cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Startups.run_sense"
+          - "sleep 5"
+          - "cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Startups.run_estimation"
+          - "sleep 5"
       - name: "启动行走控制"
         commands:
-          - "python3 -m Play.Walking.low_level"
-          - "python3 -m Play.Walking.high_level"
-          - "python3 -m Play.Walking.top_level"
+          - "cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Play.Walking.low_level"
+          - "sleep 5"
+          - "cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Play.Walking.high_level"
+          - "sleep 5"
+          - "cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Play.Walking.top_level"
+          - "sleep 5"
     data_collection:
       metrics: ["joint_positions", "body_velocity", "joint_velocity"]
       duration: 10  # 秒
