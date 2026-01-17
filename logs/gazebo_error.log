@@ -16,3 +16,4 @@
 2025-12-16 22:13:57,700 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
 2025-12-16 22:34:07,395 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
 2025-12-16 22:51:44,308 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 22:51:50,449 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。

@@ -210,3 +210,4 @@
 2025-12-16 22:51:50,450 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
 2025-12-16 22:51:50,451 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
 2025-12-16 22:51:50,452 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 22:51:51,465 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真

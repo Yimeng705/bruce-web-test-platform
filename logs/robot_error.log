@@ -89,3 +89,4 @@ inits.sh: line 17: `do'
 2025-12-16 22:49:30,879 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh
 2025-12-16 22:50:49,319 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: [sudo] password for khadas: inits.sh: line 32: -m: command not found
 2025-12-16 22:51:43,290 - robot - ERROR - real_robot_adapter.py:98 - SSH连接失败: No existing session
+2025-12-16 22:52:27,324 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: [sudo] password for khadas: inits.sh: line 32: -m: command not found

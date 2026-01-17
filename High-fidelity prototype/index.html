@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUCE | 智能机器人测试平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>BRUCE</span>
+            </div>
+            
+            <!-- 模式切换器 -->
+            <div class="mode-switcher">
+                <div class="mode-option active" data-mode="novice">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>新手模式</span>
+                    <div class="mode-badge">推荐</div>
+                </div>
+                <div class="mode-option" data-mode="expert">
+                    <i class="fas fa-cogs"></i>
+                    <span>专家模式</span>
+                    <div class="mode-badge">专业</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-center">
+            <!-- 任务进度指示器 -->
+            <div class="task-flow-indicator">
+                <div class="flow-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">选择任务</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">配置测试</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">执行监控</div>
+                </div>
+                <div class="flow-arrow"></div>
+                <div class="flow-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">分析结果</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-right">
+            <!-- 系统状态 -->
+            <div class="system-status">
+                <div class="status-item real-robot">
+                    <span class="status-dot online"></span>
+                    <span class="status-text">实机</span>
+                </div>
+                <div class="status-item gazebo">
+                    <span class="status-dot offline"></span>
+                    <span class="status-text">仿真</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name" id="current-user">测试工程师</span>
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <span class="user-mode" id="current-mode">新手模式</span>
+                            <div class="mode-indicator" style="display:flex;align-items:center;gap:8px;">
+                                <div class="indicator-dot" style="width:10px;height:10px;border-radius:50%;background:var(--primary-color);box-shadow:0 0 0 4px rgba(67,97,238,0.08);"></div>
+                                <div class="indicator-text" style="font-size:12px;color:var(--text-secondary);">已连接</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 - 使用data-mode属性控制显示 -->
+    <main class="main-content" data-mode="novice">
+        
+        <!-- ========== 新手模式界面 ========== -->
+        <div class="novice-interface active">
+            <!-- 欢迎区域 -->
+            <div class="welcome-section">
+                <div class="welcome-card">
+                    <div class="welcome-content">
+                        <h1>🤖 欢迎使用BRUCE测试平台</h1>
+                        <p class="subtitle">智能向导助您轻松完成机器人测试</p>
+                        
+                        <div class="welcome-features">
+                            <div class="feature">
+                                <i class="fas fa-magic"></i>
+                                <h3>一键测试</h3>
+                                <p>选择预设模板，系统自动完成所有配置</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>安全优先</h3>
+                                <p>内置多重安全保护机制，确保测试安全</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>智能引导</h3>
+                                <p>每一步都有详细的操作指引</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="welcome-guide">
+                        <h3>快速开始指南</h3>
+                        <ol class="guide-steps">
+                            <li>选择下方的测试模板</li>
+                            <li>查看任务预览和说明</li>
+                            <li>点击"开始测试"按钮</li>
+                            <li>系统自动完成配置和执行</li>
+                            <li>查看自动生成的测试报告</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 任务模板选择区 -->
+            <div class="template-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-th-large"></i> 选择测试模板</h2>
+                    <div class="section-actions">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="搜索模板..." id="template-search">
+                        </div>
+                        <button class="btn btn-secondary" id="show-all-templates">
+                            查看全部模板
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 推荐模板 -->
+                <div class="recommended-templates">
+                    <h3><i class="fas fa-star"></i> 推荐模板</h3>
+                    <div class="template-grid">
+                        <!-- 模板卡片 - 每个都有完整信息 -->
+                        <div class="template-card" data-template="walking-test">
+                            <div class="card-badge">热门</div>
+                            <div class="template-icon">
+                                <i class="fas fa-walking"></i>
+                            </div>
+                            <div class="template-content">
+                                <h4>步态稳定性测试</h4>
+                                <p class="template-description">验证机器人在平地和斜坡上的行走稳定性</p>
+                                <div class="template-meta">
+                                    <span><i class="far fa-clock"></i> 2分钟</span>
+                                    <span><i class="fas fa-bolt"></i> 自动配置</span>
+                                    <span><i class="fas fa-shield-alt"></i> 安全模式</span>
+                                </div>
+                                <div class="template-details">
+                                    <p><strong>适用场景：</strong>入门级测试、教学演示</p>
+                                    <p><strong>输出结果：</strong>稳定性评分、步态分析图</p>
+                                </div>
+                            </div>
+                            <div class="template-actions">
+                                <button class="btn btn-primary start-template">
+                                    <i class="fas fa-play-circle"></i> 开始测试
+                                </button>
+                                <button class="btn btn-outline preview-template">
+                                    <i class="fas fa-eye"></i> 预览
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="joint-calibration">
+                            <div class="card-badge">必备</div>
+                            <div class="template-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="template-content">
+                                <h4>关节校准测试</h4>
+                                <p class="template-description">自动校准机器人所有关节的零点和极限位置</p>
+                                <div class="template-meta">
+                                    <span><i class="far fa-clock"></i> 1分钟</span>
+                                    <span><i class="fas fa-robot"></i> 全自动</span>
+                                    <span><i class="fas fa-check-circle"></i> 高精度</span>
+                                </div>
+                                <div class="template-details">
+                                    <p><strong>适用场景：</strong>首次使用、定期维护</p>
+                                    <p><strong>输出结果：</strong>校准报告、误差分析</p>
+                                </div>
+                            </div>
+                            <div class="template-actions">
+                                <button class="btn btn-primary start-template">
+                                    <i class="fas fa-play-circle"></i> 开始测试
+                                </button>
+                                <button class="btn btn-outline preview-template">
+                                    <i class="fas fa-eye"></i> 预览
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="safety-check">
+                            <div class="card-badge">安全</div>
+                            <div class="template-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="template-content">
+                                <h4>安全功能测试</h4>
+                                <p class="template-description">验证紧急停止、碰撞检测等安全功能</p>
+                                <div class="template-meta">
+                                    <span><i class="far fa-clock"></i> 1.5分钟</span>
+                                    <span><i class="fas fa-exclamation-triangle"></i> 安全测试</span>
+                                    <span><i class="fas fa-heartbeat"></i> 健康检查</span>
+                                </div>
+                                <div class="template-details">
+                                    <p><strong>适用场景：</strong>每次测试前建议运行</p>
+                                    <p><strong>输出结果：</strong>安全评估报告</p>
+                                </div>
+                            </div>
+                            <div class="template-actions">
+                                <button class="btn btn-primary start-template">
+                                    <i class="fas fa-play-circle"></i> 开始测试
+                                </button>
+                                <button class="btn btn-outline preview-template">
+                                    <i class="fas fa-eye"></i> 预览
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 分类模板 -->
+                <div class="category-templates">
+                    <h3><i class="fas fa-folder"></i> 分类模板</h3>
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="motion">运动控制</button>
+                        <button class="category-tab" data-category="sensors">传感器</button>
+                        <button class="category-tab" data-category="safety">安全测试</button>
+                        <button class="category-tab" data-category="performance">性能测试</button>
+                    </div>
+                    
+                    <div class="category-content">
+                        <!-- 运动控制模板 -->
+                        <div class="category-grid active" data-category="motion">
+                            <div class="simple-template">
+                                <h4><i class="fas fa-shoe-prints"></i> 直线行走</h4>
+                                <p>基本直线行走测试</p>
+                                <button class="btn btn-small">快速开始</button>
+                            </div>
+                            <div class="simple-template">
+                                <h4><i class="fas fa-undo-alt"></i> 转向测试</h4>
+                                <p>左右转向灵活性测试</p>
+                                <button class="btn btn-small">快速开始</button>
+                            </div>
+                            <div class="simple-template">
+                                <h4><i class="fas fa-mountain"></i> 斜坡行走</h4>
+                                <p>斜坡适应能力测试</p>
+                                <button class="btn btn-small">快速开始</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 智能助手 -->
+            <div class="assistant-panel">
+                <div class="assistant-header">
+                    <div class="assistant-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="assistant-info">
+                        <h3>BRUCE助手</h3>
+                        <p>正在为您提供指导...</p>
+                    </div>
+                    <button class="btn btn-small" id="mute-assistant">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                </div>
+                
+                <div class="assistant-messages" id="assistant-messages">
+                    <div class="message bot">
+                        <p>👋 您好！我是BRUCE助手，将引导您完成测试。</p>
+                    </div>
+                    <div class="message bot">
+                        <p>建议从"步态稳定性测试"开始，这是最常用的入门测试。</p>
+                        <button class="btn-link" data-action="suggest-test" data-template="walking-test">
+                            <i class="fas fa-play-circle"></i> 开始这个测试
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="assistant-actions">
+                    <button class="btn btn-secondary" id="show-tips">
+                        <i class="fas fa-lightbulb"></i> 显示提示
+                    </button>
+                    <button class="btn btn-secondary" id="ask-question">
+                        <i class="fas fa-question-circle"></i> 提问
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 专家模式界面 ========== -->
+        <div class="expert-interface">
+            <!-- 专家控制中心 -->
+            <div class="expert-control-center">
+                <!-- 顶部工具栏 -->
+                <div class="expert-toolbar">
+                    <div class="toolbar-left">
+                        <button class="btn btn-secondary" id="new-project">
+                            <i class="fas fa-plus"></i> 新建项目
+                        </button>
+                        <button class="btn btn-secondary" id="load-project">
+                            <i class="fas fa-folder-open"></i> 加载项目
+                        </button>
+                        <button class="btn btn-secondary" id="save-project">
+                            <i class="fas fa-save"></i> 保存项目
+                        </button>
+                        
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle">
+                                <i class="fas fa-code"></i> 脚本工具
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item" data-action="new-script">
+                                    <i class="fas fa-file-code"></i> 新建脚本
+                                </a>
+                                <a href="#" class="dropdown-item" data-action="import-script">
+                                    <i class="fas fa-file-import"></i> 导入脚本
+                                </a>
+                                <a href="#" class="dropdown-item" data-action="script-library">
+                                    <i class="fas fa-book"></i> 脚本库
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="toolbar-right">
+                        <button class="btn btn-primary" id="batch-test">
+                            <i class="fas fa-layer-group"></i> 批量测试
+                        </button>
+                        <button class="btn btn-success" id="start-all-platforms">
+                            <i class="fas fa-play"></i> 并行执行
+                        </button>
+                        <button class="btn btn-danger" id="emergency-stop-all">
+                            <i class="fas fa-stop"></i> 全局停止
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 专家主工作区 -->
+                <div class="expert-workspace">
+                    <!-- 左侧：参数配置区 -->
+                    <div class="parameter-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-sliders-h"></i> 参数配置</h3>
+                            <div class="panel-actions">
+                                <button class="btn-icon" title="导入参数">
+                                    <i class="fas fa-file-import"></i>
+                                </button>
+                                <button class="btn-icon" title="导出参数">
+                                    <i class="fas fa-file-export"></i>
+                                </button>
+                                <button class="btn-icon" title="重置参数">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- 参数标签页 -->
+                        <div class="parameter-tabs">
+                            <button class="param-tab active" data-tab="motion">运动控制</button>
+                            <button class="param-tab" data-tab="sensors">传感器</button>
+                            <button class="param-tab" data-tab="dynamics">动力学</button>
+                            <button class="param-tab" data-tab="algorithms">算法参数</button>
+                            <button class="param-tab" data-tab="advanced">高级设置</button>
+                        </div>
+                        
+                        <!-- 运动控制参数 -->
+                        <div class="param-content active" data-tab="motion">
+                            <div class="param-group">
+                                <h4>关节控制参数</h4>
+                                <div class="param-grid">
+                                    <div class="param-item">
+                                        <label>关节PID - Kp</label>
+                                        <input type="number" value="800" step="10" min="0" max="2000">
+                                        <div class="param-help">
+                                            <i class="fas fa-question-circle"></i>
+                                            <div class="help-text">比例增益，影响响应速度</div>
+                                        </div>
+                                    </div>
+                                    <div class="param-item">
+                                        <label>关节PID - Ki</label>
+                                        <input type="number" value="50" step="1" min="0" max="200">
+                                        <div class="param-help">
+                                            <i class="fas fa-question-circle"></i>
+                                            <div class="help-text">积分增益，消除稳态误差</div>
+                                        </div>
+                                    </div>
+                                    <div class="param-item">
+                                        <label>关节PID - Kd</label>
+                                        <input type="number" value="5" step="0.1" min="0" max="50">
+                                        <div class="param-help">
+                                            <i class="fas fa-question-circle"></i>
+                                            <div class="help-text">微分增益，抑制超调</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="param-row">
+                                    <label>最大关节速度</label>
+                                    <div class="param-control">
+                                        <input type="range" min="0" max="100" value="75" class="range-slider">
+                                        <span class="param-value">75%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="param-row">
+                                    <label>加速度限制</label>
+                                    <div class="param-control">
+                                        <input type="range" min="0" max="100" value="60" class="range-slider">
+                                        <span class="param-value">60%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="param-group">
+                                <h4>步态参数</h4>
+                                <div class="param-grid">
+                                    <div class="param-item">
+                                        <label>步幅长度</label>
+                                        <input type="number" value="0.15" step="0.01" min="0.05" max="0.3">
+                                        <span class="unit">m</span>
+                                    </div>
+                                    <div class="param-item">
+                                        <label>步态周期</label>
+                                        <input type="number" value="0.8" step="0.05" min="0.3" max="2.0">
+                                        <span class="unit">s</span>
+                                    </div>
+                                    <div class="param-item">
+                                        <label>支撑相比例</label>
+                                        <input type="number" value="0.6" step="0.01" min="0.4" max="0.8">
+                                        <span class="unit">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 传感器参数 -->
+                        <div class="param-content" data-tab="sensors">
+                            <!-- 传感器参数内容 -->
+                        </div>
+                    </div>
+
+                    <!-- 中间：代码编辑器和实时可视化 -->
+                    <div class="center-workspace">
+                        <!-- 代码编辑器 -->
+                        <div class="code-editor-panel">
+                            <div class="editor-header">
+                                <h3><i class="fas fa-code"></i> 测试脚本编辑器</h3>
+                                <div class="editor-actions">
+                                    <select id="script-language">
+                                        <option value="python">Python</option>
+                                        <option value="cpp">C++</option>
+                                        <option value="ros">ROS</option>
+                                        <option value="lua">Lua</option>
+                                    </select>
+                                    <button class="btn btn-success" id="run-script">
+                                        <i class="fas fa-play"></i> 运行
+                                    </button>
+                                    <button class="btn btn-secondary" id="debug-script">
+                                        <i class="fas fa-bug"></i> 调试
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="editor-container">
+                                <div class="editor-toolbar">
+                                    <button class="btn-icon" title="保存">
+                                        <i class="fas fa-save"></i>
+                                    </button>
+                                    <button class="btn-icon" title="格式化">
+                                        <i class="fas fa-align-left"></i>
+                                    </button>
+                                    <button class="btn-icon" title="查找">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn-icon" title="版本管理">
+                                        <i class="fas fa-code-branch"></i>
+                                    </button>
+                                </div>
+                                
+                                <textarea id="code-editor" placeholder="# 输入您的测试脚本
+# 例如：控制机器人行走
+from bruce_sdk import Robot
+
+robot = Robot()
+robot.walk_forward(distance=1.0, speed=0.5)
+robot.turn_left(angle=90)
+robot.walk_backward(distance=0.5)"></textarea>
+                                
+                                <div class="editor-status">
+                                    <span class="status-item">Python</span>
+                                    <span class="status-item">UTF-8</span>
+                                    <span class="status-item">Ln 1, Col 1</span>
+                                </div>
+                            </div>
+                            
+                            <div class="editor-console">
+                                <div class="console-header">
+                                    <h4>控制台输出</h4>
+                                    <div class="console-controls">
+                                        <button class="btn-icon" id="clear-console">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button class="btn-icon" id="copy-console">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <pre id="console-output">欢迎使用BRUCE脚本编辑器！
+输入您的代码并点击运行按钮执行。</pre>
+                            </div>
+                        </div>
+
+                        <!-- 高级可视化 -->
+                        <div class="advanced-visualization">
+                            <div class="viz-tabs">
+                                <button class="viz-tab active" data-viz="3d">3D模型</button>
+                                <button class="viz-tab" data-viz="dataflow">数据流图</button>
+                                <button class="viz-tab" data-viz="network">网络拓扑</button>
+                                <button class="viz-tab" data-viz="debug">调试视图</button>
+                            </div>
+                            
+                            <div class="viz-content active" data-viz="3d">
+                                <div id="expert-3d-viewer"></div>
+                                <div class="viz-controls">
+                                    <button class="btn-icon" title="重置视角">
+                                        <i class="fas fa-redo"></i>
+                                    </button>
+                                    <button class="btn-icon" title="网格显示">
+                                        <i class="fas fa-th"></i>
+                                    </button>
+                                    <button class="btn-icon" title="坐标系">
+                                        <i class="fas fa-crosshairs"></i>
+                                    </button>
+                                    <button class="btn-icon" title="录制">
+                                        <i class="fas fa-video"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右侧：平台管理和监控 -->
+                    <div class="platform-panel">
+                        <!-- 平台管理 -->
+                        <div class="platform-manager">
+                            <div class="panel-header">
+                                <h3><i class="fas fa-server"></i> 平台管理</h3>
+                                <button class="btn-icon" id="refresh-platforms">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="platform-list">
+                                <div class="platform-card" data-platform="real-robot">
+                                    <div class="platform-header">
+                                            <label style="display:flex;align-items:center;gap:8px;">
+                                                <input type="checkbox" class="platform-enable" checked>
+                                                <div class="platform-status online">
+                                            <i class="fas fa-circle"></i>
+                                            <span>在线</span>
+                                                </div>
+                                            </label>
+                                        <div class="platform-actions">
+                                            <button class="btn-icon small" title="重启">
+                                                <i class="fas fa-redo"></i>
+                                            </button>
+                                            <button class="btn-icon small" title="断开">
+                                                <i class="fas fa-plug"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="platform-info">
+                                        <h4>BRUCE实机</h4>
+                                        <p class="platform-id">ID: BRUCE-001</p>
+                                        <div class="platform-stats">
+                                            <div class="stat">
+                                                <span class="stat-label">CPU</span>
+                                                <span class="stat-value">42%</span>
+                                            </div>
+                                            <div class="stat">
+                                                <span class="stat-label">内存</span>
+                                                <span class="stat-value">1.8GB</span>
+                                            </div>
+                                            <div class="stat">
+                                                <span class="stat-label">温度</span>
+                                                <span class="stat-value">38°C</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="platform-config">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" checked>
+                                            启用实时控制
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox">
+                                            记录原始数据
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="platform-card" data-platform="gazebo">
+                                    <div class="platform-header">
+                                            <label style="display:flex;align-items:center;gap:8px;">
+                                                <input type="checkbox" class="platform-enable">
+                                                <div class="platform-status offline">
+                                            <i class="fas fa-circle"></i>
+                                            <span>离线</span>
+                                                </div>
+                                            </label>
+                                        <div class="platform-actions">
+                                            <button class="btn btn-small" id="start-gazebo">
+                                                <i class="fas fa-play"></i> 启动
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="platform-info">
+                                        <h4>Gazebo仿真</h4>
+                                        <p class="platform-id">版本: 11.0</p>
+                                        <div class="platform-stats">
+                                            <div class="stat">
+                                                <span class="stat-label">场景</span>
+                                                <span class="stat-value">实验室</span>
+                                            </div>
+                                            <div class="stat">
+                                                <span class="stat-label">物理</span>
+                                                <span class="stat-value">ODE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="platform-config">
+                                        <select class="select-small">
+                                            <option>标准场景</option>
+                                            <option>复杂地形</option>
+                                            <option>障碍环境</option>
+                                            <option>自定义场景</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-block" id="add-virtual-platform">
+                                <i class="fas fa-plus"></i> 添加虚拟平台
+                            </button>
+                        </div>
+
+                        <!-- 实时数据监控 -->
+                        <div class="data-monitor">
+                            <div class="panel-header">
+                                <h3><i class="fas fa-chart-line"></i> 实时监控</h3>
+                                <div class="monitor-controls">
+                                    <button class="btn-icon" title="暂停">
+                                        <i class="fas fa-pause"></i>
+                                    </button>
+                                    <button class="btn-icon" title="导出数据">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="monitor-tabs">
+                                <button class="monitor-tab active" data-monitor="joints">关节数据</button>
+                                <button class="monitor-tab" data-monitor="sensors">传感器</button>
+                                <button class="monitor-tab" data-monitor="system">系统状态</button>
+                            </div>
+                            
+                            <div class="monitor-content active" data-monitor="joints">
+                                <div class="joint-monitor">
+                                    <div class="joint-item">
+                                        <div class="joint-info">
+                                            <span class="joint-name">髋关节-Yaw</span>
+                                            <span class="joint-value">45.3°</span>
+                                        </div>
+                                        <div class="joint-bar">
+                                            <div class="bar-fill" style="width: 45%"></div>
+                                        </div>
+                                    </div>
+                                    <!-- 更多关节项 -->
+                                </div>
+                            </div>
+                            
+                            <div class="quick-actions">
+                                <h4>快捷操作</h4>
+                                <button class="btn btn-small" data-action="home-position">
+                                    <i class="fas fa-home"></i> 归位
+                                </button>
+                                <button class="btn btn-small" data-action="zero-sensors">
+                                    <i class="fas fa-compress"></i> 传感器清零
+                                </button>
+                                <button class="btn btn-small" data-action="calibrate">
+                                    <i class="fas fa-ruler"></i> 快速校准
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 底部：批量测试控制台 -->
+                <div class="batch-test-console">
+                    <div class="console-header">
+                        <h3><i class="fas fa-tasks"></i> 批量测试队列</h3>
+                        <div class="queue-stats">
+                            <span>待执行: <strong>0</strong></span>
+                            <span>执行中: <strong>0</strong></span>
+                            <span>已完成: <strong>0</strong></span>
+                        </div>
+                    </div>
+                    
+                    <div class="queue-controls">
+                        <button class="btn btn-secondary" id="add-to-queue">
+                            <i class="fas fa-plus"></i> 添加测试
+                        </button>
+                        <button class="btn btn-primary" id="start-queue">
+                            <i class="fas fa-play"></i> 开始队列
+                        </button>
+                        <button class="btn btn-danger" id="clear-queue">
+                            <i class="fas fa-trash"></i> 清空队列
+                        </button>
+                    </div>
+                    
+                    <div class="queue-list">
+                        <div class="empty-queue">
+                            <i class="fas fa-inbox"></i>
+                            <p>批量测试队列为空</p>
+                            <p class="help-text">添加测试任务以创建批量测试流程</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 任务预览模态框 -->
+        <div class="modal-overlay" id="preview-modal">
+            <div class="modal modal-lg">
+                <div class="modal-header">
+                    <h3><i class="fas fa-eye"></i> 任务预览</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body" id="preview-content">
+                    <!-- 动态填充 -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="close-preview">取消</button>
+                    <button class="btn btn-primary" id="confirm-start">开始测试</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 配置向导模态框 -->
+        <div class="modal-overlay" id="wizard-modal">
+            <div class="modal modal-lg">
+                <div class="modal-header">
+                    <h3><i class="fas fa-magic"></i> 配置向导</h3>
+                    <div class="wizard-progress">
+                        <div class="progress-steps">
+                            <div class="progress-step active">1. 基础配置</div>
+                            <div class="progress-step">2. 平台选择</div>
+                            <div class="progress-step">3. 参数设置</div>
+                            <div class="progress-step">4. 安全检查</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body" id="wizard-content">
+                    <!-- 向导步骤内容 -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="prev-step">上一步</button>
+                    <button class="btn btn-primary" id="next-step">下一步</button>
+                    <button class="btn btn-success" id="finish-wizard" style="display: none;">
+                        <i class="fas fa-check"></i> 完成配置
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 批量测试配置器 -->
+        <div class="modal-overlay" id="batch-modal">
+            <div class="modal modal-xl">
+                <div class="modal-header">
+                    <h3><i class="fas fa-layer-group"></i> 批量测试配置</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="batch-configurator">
+                        <!-- 批量测试配置界面 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 快捷操作栏 -->
+    <div class="quick-toolbar">
+        <div class="toolbar-items">
+            <button class="toolbar-btn" data-action="new-test" title="新建测试">
+                <i class="fas fa-plus"></i>
+                <span>新建</span>
+            </button>
+            <button class="toolbar-btn" data-action="quick-save" title="快速保存">
+                <i class="fas fa-save"></i>
+                <span>保存</span>
+            </button>
+            <button class="toolbar-btn" data-action="run-test" title="运行测试">
+                <i class="fas fa-play"></i>
+                <span>运行</span>
+            </button>
+            <button class="toolbar-btn" data-action="stop-test" title="停止测试">
+                <i class="fas fa-stop"></i>
+                <span>停止</span>
+            </button>
+            <button class="toolbar-btn" data-action="export-data" title="导出数据">
+                <i class="fas fa-download"></i>
+                <span>导出</span>
+            </button>
+        </div>
+        
+        <div class="mode-indicator" id="mode-indicator">
+            <span class="indicator-dot"></span>
+            <span class="indicator-text">新手模式</span>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
