@@ -1,0 +1,40 @@
+# 平台连接配置
+platforms:
+  real_robot:
+    enabled: true
+    name: "BRUCE实机"
+    simulation_mode: false
+    connection:
+      type: "ssh"
+      host: "192.168.1.22"
+      port: 22
+      username: "khadas"
+      password: "khadas"
+    paths:
+      bruce_home: "/home/khadas/BRUCE/BRUCE-OP"
+      startup_script: "Play/bootup.sh"
+      termination_script: "Play/terminate.sh"
+    commands:
+      compile: "python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT"
+      initialize: "python3 -m Play.initialize"
+      low_level: "python3 -m Play.Walking.low_level"
+      high_level: "python3 -m Play.Walking.high_level"
+      top_level: "python3 -m Play.Walking.top_level"
+      
+  gazebo:
+    enabled: true
+    name: "Gazebo仿真"
+    simulation_mode: false
+    connection:
+      type: "local"  # 本地运行
+    paths:
+      bruce_home: "./BRUCE-OP"  # 相对于项目根目录
+      gazebo_script: "Simulation/launch_gazebo.sh"
+      sim_startup: "Play/sim_bootup.sh"
+    commands:
+      compile: "python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT"
+      run_simulation: "python3 -m Startups.run_simulation"
+      run_estimation: "python3 -m Startups.run_estimation"
+    config:
+      fixed_base: false
+      simulation: true

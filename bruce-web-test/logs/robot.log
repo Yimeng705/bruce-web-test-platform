@@ -1,0 +1,547 @@
+2025-12-15 16:37:10,812 - robot - ERROR - logger.py:81 - Connection error: cannot import name 'load_platform_config' from 'backend.main' (D:\Myhomework\j3\hc\bruce-web-test-platform\backend\main.py)
+2025-12-15 16:50:48,618 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 17:08:35,379 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: True)
+2025-12-15 17:08:35,380 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 17:08:35,381 - robot - INFO - real_robot_adapter.py:39 - 使用模拟模式连接
+2025-12-15 17:08:36,386 - robot - INFO - real_robot_adapter.py:43 - 实机模拟连接成功: BRUCE实机
+2025-12-15 17:38:10,953 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 17:45:29,092 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-15 17:45:30,537 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: True)
+2025-12-15 17:45:30,538 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 17:45:30,538 - robot - INFO - real_robot_adapter.py:39 - 使用模拟模式连接
+2025-12-15 17:45:31,550 - robot - INFO - real_robot_adapter.py:43 - 实机模拟连接成功: BRUCE实机
+2025-12-15 17:46:23,725 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 18:47:26,951 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: True)
+2025-12-15 18:47:26,952 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 18:47:26,952 - robot - INFO - real_robot_adapter.py:39 - 使用模拟模式连接
+2025-12-15 18:47:27,966 - robot - INFO - real_robot_adapter.py:43 - 实机模拟连接成功: BRUCE实机
+2025-12-15 18:48:07,692 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-15 21:51:34,841 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: True)
+2025-12-15 21:51:34,841 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 21:51:34,841 - robot - INFO - real_robot_adapter.py:39 - 使用模拟模式连接
+2025-12-15 21:51:35,853 - robot - INFO - real_robot_adapter.py:43 - 实机模拟连接成功: BRUCE实机
+2025-12-15 21:53:58,726 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 21:58:43,914 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 21:58:46,910 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 21:58:47,672 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 22:00:34,050 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 22:00:38,821 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-15 22:00:42,519 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-15 22:00:42,519 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 22:00:42,667 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@khadas@192.168.1.22:22
+2025-12-15 22:00:42,679 - robot - ERROR - real_robot_adapter.py:98 - SSH连接失败: [Errno 11003] getaddrinfo failed
+2025-12-15 22:00:42,680 - robot - WARNING - real_robot_adapter.py:99 - 切换到模拟模式
+2025-12-15 22:00:42,680 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 22:00:42,682 - robot - INFO - real_robot_adapter.py:39 - 使用模拟模式连接
+2025-12-15 22:00:43,690 - robot - INFO - real_robot_adapter.py:43 - 实机模拟连接成功: BRUCE实机
+2025-12-15 22:00:59,494 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 22:04:39,258 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 22:04:50,884 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 22:07:42,893 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 22:07:50,280 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-15 22:07:54,312 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-15 22:07:54,313 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 22:07:54,412 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@khadas@192.168.1.22:22
+2025-12-15 22:07:54,419 - robot - ERROR - real_robot_adapter.py:98 - SSH连接失败: [Errno 11003] getaddrinfo failed
+2025-12-15 22:07:54,421 - robot - WARNING - real_robot_adapter.py:99 - 切换到模拟模式
+2025-12-15 22:07:54,422 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 22:07:54,422 - robot - INFO - real_robot_adapter.py:39 - 使用模拟模式连接
+2025-12-15 22:07:55,423 - robot - INFO - real_robot_adapter.py:43 - 实机模拟连接成功: BRUCE实机
+2025-12-15 22:09:04,014 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-15 22:09:06,455 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-15 22:09:06,456 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 22:09:06,553 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-15 22:09:07,832 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-15 22:09:27,791 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 22:11:49,590 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-15 22:12:06,691 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-15 22:12:06,692 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 22:12:06,764 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-15 22:12:07,473 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-15 22:27:34,519 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-15 22:44:20,555 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-15 22:44:22,043 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-15 22:44:22,044 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-15 22:44:22,125 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-15 22:44:22,902 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-15 22:44:39,925 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-16 17:44:07,711 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 17:44:07,712 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 17:44:07,900 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 17:44:08,523 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 17:47:19,571 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-16 18:08:56,616 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 18:08:59,258 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 18:08:59,258 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 18:08:59,357 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 18:08:59,851 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 18:10:26,073 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-16 18:13:33,943 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 18:13:34,672 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 18:13:34,672 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 18:13:34,749 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 18:13:44,762 - robot - ERROR - real_robot_adapter.py:98 - SSH连接失败: timed out
+2025-12-16 18:13:44,763 - robot - WARNING - real_robot_adapter.py:99 - 切换到模拟模式
+2025-12-16 18:13:44,764 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 18:13:44,765 - robot - INFO - real_robot_adapter.py:39 - 使用模拟模式连接
+2025-12-16 18:13:45,774 - robot - INFO - real_robot_adapter.py:43 - 实机模拟连接成功: BRUCE实机
+2025-12-16 18:15:16,377 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 18:15:38,361 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 18:15:38,361 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 18:15:38,447 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 18:15:39,142 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 18:15:54,816 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-16 18:17:27,123 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 18:17:28,714 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 18:17:28,715 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 18:17:28,828 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 18:17:29,346 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 18:17:56,592 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 18:22:52,674 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 18:22:52,675 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 18:22:52,749 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 18:22:53,276 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 18:32:20,478 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 18:32:21,240 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 18:32:21,241 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 18:32:21,326 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 18:32:21,782 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 18:38:38,604 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 18:38:39,356 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 18:38:39,357 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 18:38:39,439 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 18:38:40,137 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:17:12,850 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:17:12,851 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:17:12,956 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:17:14,539 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:22:11,593 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 21:22:12,424 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:22:12,426 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:22:12,542 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:22:13,731 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:26:06,567 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 21:26:07,914 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:26:07,915 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:26:07,999 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:26:08,625 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:26:13,402 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-16 21:26:35,310 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-16 21:26:35,969 - robot - ERROR - logger.py:81 - Connection error: 
+2025-12-16 21:29:13,835 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 21:29:15,153 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:29:15,153 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:29:15,230 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:29:16,218 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:29:23,585 - robot - INFO - logger.py:73 - 正在加载平台配置...
+2025-12-16 21:29:23,592 - robot - INFO - logger.py:73 - 配置加载成功: ['platforms']
+2025-12-16 21:29:23,597 - robot - INFO - logger.py:73 - 实机配置: {'enabled': True, 'name': 'BRUCE实机', 'simulation_mode': False, 'connection': {'type': 'ssh', 'host': '192.168.1.22', 'port': 22, 'username': 'khadas', 'password': 'khadas'}, 'paths': {'bruce_home': '/home/khadas/BRUCE/BRUCE-OP', 'startup_script': 'Play/bootup.sh', 'termination_script': 'Play/terminate.sh'}, 'commands': {'compile': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'initialize': 'python3 -m Play.initialize', 'low_level': 'python3 -m Play.Walking.low_level', 'high_level': 'python3 -m Play.Walking.high_level', 'top_level': 'python3 -m Play.Walking.top_level'}}
+2025-12-16 21:29:23,598 - robot - INFO - logger.py:73 - 正在创建RealRobotAdapter实例...
+2025-12-16 21:29:23,598 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:29:23,600 - robot - INFO - logger.py:73 - RealRobotAdapter实例创建成功
+2025-12-16 21:29:23,601 - robot - INFO - logger.py:73 - 正在尝试连接...
+2025-12-16 21:29:23,602 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:29:23,603 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:29:24,230 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:29:24,231 - robot - INFO - logger.py:73 - 连接尝试完成，结果: True
+2025-12-16 21:29:24,233 - robot - INFO - logger.py:73 - Real robot connected successfully
+2025-12-16 21:29:41,580 - robot - INFO - real_robot_adapter.py:154 - 执行命令: initialize
+2025-12-16 21:29:42,342 - robot - INFO - logger.py:73 - Command: initialize - ❌ FAILED | {'success': False, 'command': 'initialize', 'output': '', 'error': 'bash: line 1: initialize: command not found', 'return_code': 127, 'timestamp': '2025-12-16T21:29:42.341272'}
+2025-12-16 21:30:38,199 - robot - INFO - real_robot_adapter.py:154 - 执行命令: initialize
+2025-12-16 21:30:38,868 - robot - INFO - logger.py:73 - Command: initialize - ❌ FAILED | {'success': False, 'command': 'initialize', 'output': '', 'error': 'bash: line 1: initialize: command not found', 'return_code': 127, 'timestamp': '2025-12-16T21:30:38.867352'}
+2025-12-16 21:30:56,494 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 21:31:05,468 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:31:05,469 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:31:05,548 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:31:06,171 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:31:16,074 - robot - INFO - logger.py:73 - 正在加载平台配置...
+2025-12-16 21:31:16,078 - robot - INFO - logger.py:73 - 配置加载成功: ['platforms']
+2025-12-16 21:31:16,079 - robot - INFO - logger.py:73 - 实机配置: {'enabled': True, 'name': 'BRUCE实机', 'simulation_mode': False, 'connection': {'type': 'ssh', 'host': '192.168.1.22', 'port': 22, 'username': 'khadas', 'password': 'khadas'}, 'paths': {'bruce_home': '/home/khadas/BRUCE/BRUCE-OP', 'startup_script': 'Play/bootup.sh', 'termination_script': 'Play/terminate.sh'}, 'commands': {'compile': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'initialize': 'python3 -m Play.initialize', 'low_level': 'python3 -m Play.Walking.low_level', 'high_level': 'python3 -m Play.Walking.high_level', 'top_level': 'python3 -m Play.Walking.top_level'}}
+2025-12-16 21:31:16,080 - robot - INFO - logger.py:73 - 正在创建RealRobotAdapter实例...
+2025-12-16 21:31:16,080 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:31:16,082 - robot - INFO - logger.py:73 - RealRobotAdapter实例创建成功
+2025-12-16 21:31:16,082 - robot - INFO - logger.py:73 - 正在尝试连接...
+2025-12-16 21:31:16,083 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:31:16,083 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:31:16,856 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:31:16,858 - robot - INFO - logger.py:73 - 连接尝试完成，结果: True
+2025-12-16 21:31:16,858 - robot - INFO - logger.py:73 - Real robot connected successfully
+2025-12-16 21:31:21,886 - robot - INFO - real_robot_adapter.py:154 - 执行命令: python3 -m Startups.memory_manager
+2025-12-16 21:31:22,558 - robot - ERROR - logger.py:81 - 命令执行失败: python3 -m Startups.memory_manager
+2025-12-16 21:31:22,562 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': False, 'command': 'python3 -m Startups.memory_manager', 'output': '', 'error': "/usr/bin/python3: Error while finding module specification for 'Startups.memory_manager' (ModuleNotFoundError: No module named 'Startups')", 'return_code': 1, 'timestamp': '2025-12-16T21:31:22.557151'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T21:31:22.562154'}
+2025-12-16 21:33:04,147 - robot - INFO - real_robot_adapter.py:234 - 开始执行测试: initialization
+2025-12-16 21:33:04,148 - robot - INFO - real_robot_adapter.py:154 - 执行命令: echo "Running test: initialization"
+2025-12-16 21:35:43,335 - robot - INFO - real_robot_adapter.py:234 - 开始执行测试: initialization
+2025-12-16 21:35:43,335 - robot - INFO - real_robot_adapter.py:154 - 执行命令: echo "Running test: initialization"
+2025-12-16 21:37:27,815 - robot - INFO - real_robot_adapter.py:234 - 开始执行测试: initialization
+2025-12-16 21:37:27,816 - robot - INFO - real_robot_adapter.py:154 - 执行命令: echo "Running test: initialization"
+2025-12-16 21:46:06,061 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 21:46:06,825 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:46:06,825 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:46:06,914 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:46:07,658 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:46:21,803 - robot - INFO - logger.py:73 - 正在加载平台配置...
+2025-12-16 21:46:21,810 - robot - INFO - logger.py:73 - 配置加载成功: ['platforms']
+2025-12-16 21:46:21,810 - robot - INFO - logger.py:73 - 实机配置: {'enabled': True, 'name': 'BRUCE实机', 'simulation_mode': False, 'connection': {'type': 'ssh', 'host': '192.168.1.22', 'port': 22, 'username': 'khadas', 'password': 'khadas'}, 'paths': {'bruce_home': '/home/khadas/BRUCE/BRUCE-OP', 'startup_script': 'Play/bootup.sh', 'termination_script': 'Play/terminate.sh'}, 'commands': {'compile': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'initialize': 'python3 -m Play.initialize', 'low_level': 'python3 -m Play.Walking.low_level', 'high_level': 'python3 -m Play.Walking.high_level', 'top_level': 'python3 -m Play.Walking.top_level'}}
+2025-12-16 21:46:21,811 - robot - INFO - logger.py:73 - 正在创建RealRobotAdapter实例...
+2025-12-16 21:46:21,812 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:46:21,812 - robot - INFO - logger.py:73 - RealRobotAdapter实例创建成功
+2025-12-16 21:46:21,814 - robot - INFO - logger.py:73 - 正在尝试连接...
+2025-12-16 21:46:21,815 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:46:21,817 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:46:22,618 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:46:22,621 - robot - INFO - logger.py:73 - 连接尝试完成，结果: True
+2025-12-16 21:46:22,622 - robot - INFO - logger.py:73 - Real robot connected successfully
+2025-12-16 21:46:36,703 - robot - INFO - real_robot_adapter.py:154 - 执行命令: python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT
+2025-12-16 21:46:37,457 - robot - ERROR - logger.py:81 - 命令执行失败: python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT
+2025-12-16 21:46:37,461 - robot - INFO - logger.py:73 - Command: compile_check - ❌ FAILED | {'success': False, 'results': [{'success': False, 'command': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'output': '', 'error': "/usr/bin/python3: Error while finding module specification for 'Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT' (ModuleNotFoundError: No module named 'Library')", 'return_code': 1, 'timestamp': '2025-12-16T21:46:37.457254'}], 'test_case': 'compile_check', 'timestamp': '2025-12-16T21:46:37.460511'}
+2025-12-16 21:47:04,874 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 21:47:08,840 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:47:08,842 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:47:08,965 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:47:10,188 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:47:18,549 - robot - INFO - logger.py:73 - 正在加载平台配置...
+2025-12-16 21:47:18,552 - robot - INFO - logger.py:73 - 配置加载成功: ['platforms']
+2025-12-16 21:47:18,553 - robot - INFO - logger.py:73 - 实机配置: {'enabled': True, 'name': 'BRUCE实机', 'simulation_mode': False, 'connection': {'type': 'ssh', 'host': '192.168.1.22', 'port': 22, 'username': 'khadas', 'password': 'khadas'}, 'paths': {'bruce_home': '/home/khadas/BRUCE/BRUCE-OP', 'startup_script': 'Play/bootup.sh', 'termination_script': 'Play/terminate.sh'}, 'commands': {'compile': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'initialize': 'python3 -m Play.initialize', 'low_level': 'python3 -m Play.Walking.low_level', 'high_level': 'python3 -m Play.Walking.high_level', 'top_level': 'python3 -m Play.Walking.top_level'}}
+2025-12-16 21:47:18,554 - robot - INFO - logger.py:73 - 正在创建RealRobotAdapter实例...
+2025-12-16 21:47:18,556 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 21:47:18,557 - robot - INFO - logger.py:73 - RealRobotAdapter实例创建成功
+2025-12-16 21:47:18,558 - robot - INFO - logger.py:73 - 正在尝试连接...
+2025-12-16 21:47:18,559 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 21:47:18,560 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 21:47:19,081 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 21:47:19,082 - robot - INFO - logger.py:73 - 连接尝试完成，结果: True
+2025-12-16 21:47:19,082 - robot - INFO - logger.py:73 - Real robot connected successfully
+2025-12-16 21:47:21,346 - robot - INFO - real_robot_adapter.py:154 - 执行命令: pwd
+2025-12-16 21:47:21,998 - robot - INFO - real_robot_adapter.py:154 - 执行命令: python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT
+2025-12-16 21:47:22,662 - robot - ERROR - logger.py:81 - 命令执行失败: python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT
+2025-12-16 21:47:22,663 - robot - INFO - logger.py:73 - Command: compile_check - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'pwd', 'output': '/home/khadas', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T21:47:21.998487'}, {'success': False, 'command': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'output': '', 'error': "/usr/bin/python3: Error while finding module specification for 'Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT' (ModuleNotFoundError: No module named 'Library')", 'return_code': 1, 'timestamp': '2025-12-16T21:47:22.661226'}], 'test_case': 'compile_check', 'timestamp': '2025-12-16T21:47:22.663833'}
+2025-12-16 21:56:10,613 - robot - INFO - real_robot_adapter.py:234 - 开始执行测试: initialization
+2025-12-16 21:56:10,614 - robot - INFO - real_robot_adapter.py:154 - 执行命令: echo "Running test: initialization"
+2025-12-16 21:56:29,680 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 21:56:30,383 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Startups.memory_manager
+2025-12-16 21:56:31,225 - robot - INFO - real_robot_adapter.py:154 - 执行命令: sleep 5
+2025-12-16 21:56:36,872 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Startups.run_dxl
+2025-12-16 21:57:07,510 - robot - ERROR - real_robot_adapter.py:219 - 命令执行失败: 
+2025-12-16 21:57:07,513 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Startups.run_dxl
+2025-12-16 21:57:07,514 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T21:56:30.383635'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Startups.memory_manager', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T21:56:31.225422'}, {'success': True, 'command': 'sleep 5', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T21:56:36.872491'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Startups.run_dxl', 'output': '', 'error': '', 'return_code': -1, 'timestamp': '2025-12-16T21:57:07.512280'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T21:57:07.514297'}
+2025-12-16 22:13:55,777 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 22:13:57,168 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 22:13:57,169 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 22:13:57,256 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 22:13:57,697 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 22:14:02,235 - robot - INFO - logger.py:73 - 正在加载平台配置...
+2025-12-16 22:14:02,240 - robot - INFO - logger.py:73 - 配置加载成功: ['platforms']
+2025-12-16 22:14:02,240 - robot - INFO - logger.py:73 - 实机配置: {'enabled': True, 'name': 'BRUCE实机', 'simulation_mode': False, 'connection': {'type': 'ssh', 'host': '192.168.1.22', 'port': 22, 'username': 'khadas', 'password': 'khadas'}, 'paths': {'bruce_home': '/home/khadas/BRUCE/BRUCE-OP', 'startup_script': 'Play/bootup.sh', 'termination_script': 'Play/terminate.sh'}, 'commands': {'compile': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'initialize': 'python3 -m Play.initialize', 'low_level': 'python3 -m Play.Walking.low_level', 'high_level': 'python3 -m Play.Walking.high_level', 'top_level': 'python3 -m Play.Walking.top_level'}}
+2025-12-16 22:14:02,241 - robot - INFO - logger.py:73 - 正在创建RealRobotAdapter实例...
+2025-12-16 22:14:02,242 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 22:14:02,242 - robot - INFO - logger.py:73 - RealRobotAdapter实例创建成功
+2025-12-16 22:14:02,244 - robot - INFO - logger.py:73 - 正在尝试连接...
+2025-12-16 22:14:02,245 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 22:14:02,246 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 22:14:02,693 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 22:14:02,694 - robot - INFO - logger.py:73 - 连接尝试完成，结果: True
+2025-12-16 22:14:02,695 - robot - INFO - logger.py:73 - Real robot connected successfully
+2025-12-16 22:14:09,129 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:14:09,767 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:14:09,771 - robot - INFO - real_robot_adapter.py:236 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:14:09,773 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh
+2025-12-16 22:14:10,425 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh, 返回码: 0
+2025-12-16 22:14:10,428 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && echo 'y' | ./init.sh
+2025-12-16 22:14:11,030 - robot - INFO - real_robot_adapter.py:210 - 执行交互式命令: ./init.sh
+2025-12-16 22:14:11,202 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && echo 'y' | ./init.sh, 返回码: 127
+2025-12-16 22:14:11,203 - robot - ERROR - real_robot_adapter.py:238 - 命令错误: bash: line 1: ./init.sh: No such file or directory
+2025-12-16 22:14:11,204 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && echo 'y' | ./init.sh
+2025-12-16 22:14:11,205 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:14:09.773840'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:14:10.428477'}, {'success': False, 'command': "cd /home/khadas/BRUCE/BRUCE-OP && echo 'y' | ./init.sh", 'output': '', 'error': 'bash: line 1: ./init.sh: No such file or directory', 'return_code': 127, 'timestamp': '2025-12-16T22:14:11.204234'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:14:11.205227'}
+2025-12-16 22:16:05,524 - robot - INFO - real_robot_adapter.py:265 - 开始执行测试: initialization
+2025-12-16 22:16:05,525 - robot - INFO - real_robot_adapter.py:154 - 执行命令: echo "Running test: initialization"
+2025-12-16 22:16:06,293 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: echo "Running test: initialization", 返回码: 0
+2025-12-16 22:16:06,295 - robot - INFO - real_robot_adapter.py:236 - 命令输出: Running test: initialization...
+2025-12-16 22:16:31,328 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:16:31,992 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:16:31,995 - robot - INFO - real_robot_adapter.py:236 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:16:31,996 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh
+2025-12-16 22:16:32,637 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh, 返回码: 0
+2025-12-16 22:16:32,641 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && echo 'y' | ./init.sh
+2025-12-16 22:16:33,185 - robot - INFO - real_robot_adapter.py:210 - 执行交互式命令: ./init.sh
+2025-12-16 22:16:33,333 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && echo 'y' | ./init.sh, 返回码: 127
+2025-12-16 22:16:33,334 - robot - ERROR - real_robot_adapter.py:238 - 命令错误: bash: line 1: ./init.sh: No such file or directory
+2025-12-16 22:16:33,335 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && echo 'y' | ./init.sh
+2025-12-16 22:16:33,338 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:16:31.996214'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:16:32.641978'}, {'success': False, 'command': "cd /home/khadas/BRUCE/BRUCE-OP && echo 'y' | ./init.sh", 'output': '', 'error': 'bash: line 1: ./init.sh: No such file or directory', 'return_code': 127, 'timestamp': '2025-12-16T22:16:33.335663'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:16:33.337691'}
+2025-12-16 22:22:47,645 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:22:48,326 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:22:48,328 - robot - INFO - real_robot_adapter.py:236 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:22:48,330 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh
+2025-12-16 22:22:49,248 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh, 返回码: 0
+2025-12-16 22:22:49,249 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && ls && echo 'y' | ./init.sh
+2025-12-16 22:22:49,788 - robot - INFO - real_robot_adapter.py:210 - 执行交互式命令: ./init.sh
+2025-12-16 22:22:49,877 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && ls && echo 'y' | ./init.sh, 返回码: 127
+2025-12-16 22:22:49,878 - robot - ERROR - real_robot_adapter.py:238 - 命令错误: bash: line 1: ./init.sh: No such file or directory
+2025-12-16 22:22:49,878 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && ls && echo 'y' | ./init.sh
+2025-12-16 22:22:49,879 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:22:48.330405'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:22:49.249910'}, {'success': False, 'command': "cd /home/khadas/BRUCE/BRUCE-OP && ls && echo 'y' | ./init.sh", 'output': '', 'error': 'bash: line 1: ./init.sh: No such file or directory', 'return_code': 127, 'timestamp': '2025-12-16T22:22:49.878272'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:22:49.879272'}
+2025-12-16 22:23:24,947 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:23:25,713 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:23:25,714 - robot - INFO - real_robot_adapter.py:236 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:23:25,714 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh
+2025-12-16 22:23:26,392 - robot - INFO - real_robot_adapter.py:234 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh, 返回码: 0
+2025-12-16 22:23:26,395 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && ls && ./init.sh
+2025-12-16 22:25:28,455 - robot - ERROR - real_robot_adapter.py:250 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && ls && ./init.sh, 错误: 
+Traceback (most recent call last):
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\channel.py", line 697, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\buffered_pipe.py", line 154, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myhomework\j3\hc\bruce-web-test-platform\backend\adapters\real_robot_adapter.py", line 230, in execute_command
+    output = stdout.read().decode('utf-8', errors='ignore').strip()
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\file.py", line 184, in read
+    new_data = self._read(self._DEFAULT_BUFSIZE)
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\channel.py", line 1359, in _read
+    return self.channel.recv(size)
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\channel.py", line 699, in recv
+    raise socket.timeout()
+socket.timeout
+2025-12-16 22:25:28,475 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && ls && ./init.sh
+2025-12-16 22:25:28,495 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:23:25.714524'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:23:26.394039'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && ls && ./init.sh', 'output': '', 'error': '', 'return_code': -1, 'timestamp': '2025-12-16T22:25:28.472620'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:25:28.495626'}
+2025-12-16 22:34:05,242 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 22:34:06,691 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 22:34:06,691 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 22:34:06,801 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 22:34:07,385 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 22:34:15,114 - robot - INFO - logger.py:73 - 正在加载平台配置...
+2025-12-16 22:34:15,127 - robot - INFO - logger.py:73 - 配置加载成功: ['platforms']
+2025-12-16 22:34:15,129 - robot - INFO - logger.py:73 - 实机配置: {'enabled': True, 'name': 'BRUCE实机', 'simulation_mode': False, 'connection': {'type': 'ssh', 'host': '192.168.1.22', 'port': 22, 'username': 'khadas', 'password': 'khadas'}, 'paths': {'bruce_home': '/home/khadas/BRUCE/BRUCE-OP', 'startup_script': 'Play/bootup.sh', 'termination_script': 'Play/terminate.sh'}, 'commands': {'compile': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'initialize': 'python3 -m Play.initialize', 'low_level': 'python3 -m Play.Walking.low_level', 'high_level': 'python3 -m Play.Walking.high_level', 'top_level': 'python3 -m Play.Walking.top_level'}}
+2025-12-16 22:34:15,131 - robot - INFO - logger.py:73 - 正在创建RealRobotAdapter实例...
+2025-12-16 22:34:15,132 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 22:34:15,134 - robot - INFO - logger.py:73 - RealRobotAdapter实例创建成功
+2025-12-16 22:34:15,136 - robot - INFO - logger.py:73 - 正在尝试连接...
+2025-12-16 22:34:15,138 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 22:34:15,139 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 22:34:16,569 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 22:34:16,570 - robot - INFO - logger.py:73 - 连接尝试完成，结果: True
+2025-12-16 22:34:16,574 - robot - INFO - logger.py:73 - Real robot connected successfully
+2025-12-16 22:34:18,574 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:34:19,222 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:34:19,224 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:34:19,226 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh
+2025-12-16 22:34:20,117 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh, 返回码: 0
+2025-12-16 22:34:20,121 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./init.sh
+2025-12-16 22:34:20,672 - robot - INFO - real_robot_adapter.py:206 - 执行初始化脚本命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./init.sh
+2025-12-16 22:39:20,869 - robot - INFO - real_robot_adapter.py:253 - 初始化脚本执行完成，返回码: 124
+2025-12-16 22:39:20,870 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./init.sh, 返回码: 124
+2025-12-16 22:39:20,871 - robot - INFO - real_robot_adapter.py:276 - 命令输出: ====== USB Low Latency Setup Finished ======
+
+====== Shared Memory Created ======
+
+====== BRUCE Gamepad Online ======...
+2025-12-16 22:39:20,879 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: [sudo] password for khadas:
+2025-12-16 22:39:20,889 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./init.sh
+2025-12-16 22:39:20,896 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:34:19.226274'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:34:20.120569'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./init.sh', 'output': '====== USB Low Latency Setup Finished ======\n\n====== Shared Memory Created ======\n\n====== BRUCE Gamepad Online ======', 'error': '[sudo] password for khadas:', 'return_code': 124, 'timestamp': '2025-12-16T22:39:20.889799'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:39:20.896081'}
+2025-12-16 22:42:02,877 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:42:03,719 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:42:03,724 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:42:03,726 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh
+2025-12-16 22:42:04,351 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh, 返回码: 0
+2025-12-16 22:42:04,356 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./inits.sh
+2025-12-16 22:42:05,139 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./inits.sh, 返回码: 126
+2025-12-16 22:42:05,142 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: timeout: failed to run command ‘./inits.sh’: Permission denied
+2025-12-16 22:42:05,145 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./inits.sh
+2025-12-16 22:42:05,150 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:42:03.726199'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:42:04.356839'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./inits.sh', 'output': '', 'error': 'timeout: failed to run command ‘./inits.sh’: Permission denied', 'return_code': 126, 'timestamp': '2025-12-16T22:42:05.145213'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:42:05.148137'}
+2025-12-16 22:42:54,280 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:42:54,978 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:42:54,978 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:42:54,979 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh
+2025-12-16 22:42:55,615 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh, 返回码: 0
+2025-12-16 22:42:55,616 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./inits.sh
+2025-12-16 22:42:56,246 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./inits.sh, 返回码: 127
+2025-12-16 22:42:56,247 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: timeout: failed to run command ‘./inits.sh’: No such file or directory
+2025-12-16 22:42:56,248 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./inits.sh
+2025-12-16 22:42:56,249 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:42:54.979987'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:42:55.616649'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s ./inits.sh', 'output': '', 'error': 'timeout: failed to run command ‘./inits.sh’: No such file or directory', 'return_code': 127, 'timestamp': '2025-12-16T22:42:56.248495'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:42:56.249496'}
+2025-12-16 22:43:44,676 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:43:45,279 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:43:45,281 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:43:45,282 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh
+2025-12-16 22:43:45,890 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh, 返回码: 0
+2025-12-16 22:43:45,895 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && ls && timeout 300s ./inits.sh
+2025-12-16 22:43:46,594 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && ls && timeout 300s ./inits.sh, 返回码: 127
+2025-12-16 22:43:46,595 - robot - INFO - real_robot_adapter.py:276 - 命令输出: body_acc_all.png
+body_velocity_all.png
+body_velocity_x.png
+datas.xlsx
+Examples
+init.sh
+inits.sh
+Library
+LICENSE
+lin_vel_20250927_023843.png
+load_bruce.py
+model_21000.pt
+model_2750.pt
+model_3700.pt
+Myset.py
+obs_data
+Play
+__pycache__
+README.md
+run_load.sh
+setforvel.py
+Settings
+Simulation
+Startups
+test_acc.py
+test_vel_ang.py
+Util
+vel_test...
+2025-12-16 22:43:46,597 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: timeout: failed to run command ‘./inits.sh’: No such file or directory
+2025-12-16 22:43:46,601 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && ls && timeout 300s ./inits.sh
+2025-12-16 22:43:46,610 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:43:45.282353'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:43:45.895356'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && ls && timeout 300s ./inits.sh', 'output': 'body_acc_all.png\nbody_velocity_all.png\nbody_velocity_x.png\ndatas.xlsx\nExamples\ninit.sh\ninits.sh\nLibrary\nLICENSE\nlin_vel_20250927_023843.png\nload_bruce.py\nmodel_21000.pt\nmodel_2750.pt\nmodel_3700.pt\nMyset.py\nobs_data\nPlay\n__pycache__\nREADME.md\nrun_load.sh\nsetforvel.py\nSettings\nSimulation\nStartups\ntest_acc.py\ntest_vel_ang.py\nUtil\nvel_test', 'error': 'timeout: failed to run command ‘./inits.sh’: No such file or directory', 'return_code': 127, 'timestamp': '2025-12-16T22:43:46.601784'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:43:46.610128'}
+2025-12-16 22:45:45,619 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:45:46,205 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:45:46,206 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:45:46,207 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh
+2025-12-16 22:45:46,775 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh, 返回码: 0
+2025-12-16 22:45:46,775 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh
+2025-12-16 22:45:47,407 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh, 返回码: 2
+2025-12-16 22:45:47,409 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: inits.sh: line 11: $'\r': command not found
+inits.sh: line 12: cd: $'/home/khadas/BRUCE/BRUCE-OP\r': No such file or directory
+bash: Startups/startup_setup.sh: No such file or directory
+inits.sh: line 14: $'\r': command not found
+inits.sh: line 17: syntax error near unexpected token `$'do\r''
+inits.sh: line 17: `do'
+2025-12-16 22:45:47,409 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh
+2025-12-16 22:45:47,410 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:45:46.207282'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:45:46.775966'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh', 'output': '', 'error': "inits.sh: line 11: $'\\r': command not found\ninits.sh: line 12: cd: $'/home/khadas/BRUCE/BRUCE-OP\\r': No such file or directory\nbash: Startups/startup_setup.sh\r: No such file or directory\ninits.sh: line 14: $'\\r': command not found\ninits.sh: line 17: syntax error near unexpected token `$'do\\r''\ninits.sh: line 17: `do\r'", 'return_code': 2, 'timestamp': '2025-12-16T22:45:47.409804'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:45:47.410724'}
+2025-12-16 22:46:53,207 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:46:53,885 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:46:53,887 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:46:53,887 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh
+2025-12-16 22:46:54,500 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh, 返回码: 0
+2025-12-16 22:46:54,500 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash init.sh
+2025-12-16 22:48:56,413 - robot - ERROR - real_robot_adapter.py:290 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash init.sh, 错误: name 'socket' is not defined
+Traceback (most recent call last):
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\channel.py", line 697, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\buffered_pipe.py", line 154, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myhomework\j3\hc\bruce-web-test-platform\backend\adapters\real_robot_adapter.py", line 265, in execute_command
+    output = stdout.read().decode('utf-8', errors='ignore').strip()
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\file.py", line 184, in read
+    new_data = self._read(self._DEFAULT_BUFSIZE)
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\channel.py", line 1359, in _read
+    return self.channel.recv(size)
+  File "C:\Users\16370\.conda\envs\hcfw\lib\site-packages\paramiko\channel.py", line 699, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myhomework\j3\hc\bruce-web-test-platform\backend\adapters\real_robot_adapter.py", line 268, in execute_command
+    except socket.timeout:
+NameError: name 'socket' is not defined
+2025-12-16 22:48:56,423 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash init.sh
+2025-12-16 22:48:56,424 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:46:53.887850'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x init.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:46:54.500114'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash init.sh', 'output': '', 'error': "name 'socket' is not defined", 'return_code': -1, 'timestamp': '2025-12-16T22:48:56.423073'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:48:56.424856'}
+2025-12-16 22:49:28,731 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:49:29,502 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:49:29,505 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:49:29,507 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh
+2025-12-16 22:49:30,135 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh, 返回码: 0
+2025-12-16 22:49:30,136 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh
+2025-12-16 22:49:30,878 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh, 返回码: 2
+2025-12-16 22:49:30,879 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: inits.sh: line 11: $'\r': command not found
+inits.sh: line 12: cd: $'/home/khadas/BRUCE/BRUCE-OP\r': No such file or directory
+bash: Startups/startup_setup.sh: No such file or directory
+inits.sh: line 14: $'\r': command not found
+inits.sh: line 17: syntax error near unexpected token `$'do\r''
+inits.sh: line 17: `do'
+2025-12-16 22:49:30,879 - robot - ERROR - logger.py:81 - 命令执行失败: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh
+2025-12-16 22:49:30,881 - robot - INFO - logger.py:73 - Command: initialization - ❌ FAILED | {'success': False, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:49:29.507262'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:49:30.136451'}, {'success': False, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh', 'output': '', 'error': "inits.sh: line 11: $'\\r': command not found\ninits.sh: line 12: cd: $'/home/khadas/BRUCE/BRUCE-OP\\r': No such file or directory\nbash: Startups/startup_setup.sh\r: No such file or directory\ninits.sh: line 14: $'\\r': command not found\ninits.sh: line 17: syntax error near unexpected token `$'do\\r''\ninits.sh: line 17: `do\r'", 'return_code': 2, 'timestamp': '2025-12-16T22:49:30.879937'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:49:30.881079'}
+2025-12-16 22:50:23,520 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:50:24,424 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:50:24,426 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:50:24,429 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh
+2025-12-16 22:50:25,226 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh, 返回码: 0
+2025-12-16 22:50:25,228 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh
+2025-12-16 22:50:49,316 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh, 返回码: 0
+2025-12-16 22:50:49,318 - robot - INFO - real_robot_adapter.py:276 - 命令输出: ====== USB Low Latency Setup Finished ======
+
+====== Shared Memory Created ======
+
+====== BRUCE Gamepad Online ======
+
+Starting DXL control in 5 seconds...
+====== Dynamixel Motor Online ======
+
+Starting BEAR control in 5 seconds...
+====== BEAR Motor Online ======
+
+Initializing BRUCE in 5 seconds...
+====== BRUCE Initialized ======...
+2025-12-16 22:50:49,319 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: [sudo] password for khadas: inits.sh: line 32: -m: command not found
+2025-12-16 22:50:49,321 - robot - INFO - logger.py:73 - Command: initialization - ✅ SUCCESS | {'success': True, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:50:24.429061'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:50:25.228394'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh', 'output': '====== USB Low Latency Setup Finished ======\n\n====== Shared Memory Created ======\n\n====== BRUCE Gamepad Online ======\n\nStarting DXL control in 5 seconds...\n====== Dynamixel Motor Online ======\n\nStarting BEAR control in 5 seconds...\n====== BEAR Motor Online ======\n\nInitializing BRUCE in 5 seconds...\n====== BRUCE Initialized ======', 'error': '[sudo] password for khadas: inits.sh: line 32: -m: command not found', 'return_code': 0, 'timestamp': '2025-12-16T22:50:49.321652'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:50:49.321652'}
+2025-12-16 22:51:28,693 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 22:51:33,154 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 22:51:33,155 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 22:51:33,248 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 22:51:43,290 - robot - ERROR - real_robot_adapter.py:98 - SSH连接失败: No existing session
+2025-12-16 22:51:43,292 - robot - WARNING - real_robot_adapter.py:99 - 切换到模拟模式
+2025-12-16 22:51:43,292 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 22:51:43,294 - robot - INFO - real_robot_adapter.py:39 - 使用模拟模式连接
+2025-12-16 22:51:44,299 - robot - INFO - real_robot_adapter.py:43 - 实机模拟连接成功: BRUCE实机
+2025-12-16 22:51:47,208 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 22:51:49,934 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 22:51:49,935 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 22:51:50,027 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 22:51:50,442 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 22:51:58,381 - robot - INFO - logger.py:73 - 正在加载平台配置...
+2025-12-16 22:51:58,395 - robot - INFO - logger.py:73 - 配置加载成功: ['platforms']
+2025-12-16 22:51:58,396 - robot - INFO - logger.py:73 - 实机配置: {'enabled': True, 'name': 'BRUCE实机', 'simulation_mode': False, 'connection': {'type': 'ssh', 'host': '192.168.1.22', 'port': 22, 'username': 'khadas', 'password': 'khadas'}, 'paths': {'bruce_home': '/home/khadas/BRUCE/BRUCE-OP', 'startup_script': 'Play/bootup.sh', 'termination_script': 'Play/terminate.sh'}, 'commands': {'compile': 'python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'initialize': 'python3 -m Play.initialize', 'low_level': 'python3 -m Play.Walking.low_level', 'high_level': 'python3 -m Play.Walking.high_level', 'top_level': 'python3 -m Play.Walking.top_level'}}
+2025-12-16 22:51:58,397 - robot - INFO - logger.py:73 - 正在创建RealRobotAdapter实例...
+2025-12-16 22:51:58,399 - robot - INFO - real_robot_adapter.py:25 - 初始化实机适配器: BRUCE实机 (模拟模式: False)
+2025-12-16 22:51:58,400 - robot - INFO - logger.py:73 - RealRobotAdapter实例创建成功
+2025-12-16 22:51:58,402 - robot - INFO - logger.py:73 - 正在尝试连接...
+2025-12-16 22:51:58,403 - robot - INFO - real_robot_adapter.py:30 - 尝试连接实机: BRUCE实机
+2025-12-16 22:51:58,405 - robot - INFO - real_robot_adapter.py:60 - 尝试SSH连接: khadas@192.168.1.22:22
+2025-12-16 22:51:59,861 - robot - INFO - real_robot_adapter.py:85 - 实机SSH连接成功: BRUCE实机
+2025-12-16 22:51:59,861 - robot - INFO - logger.py:73 - 连接尝试完成，结果: True
+2025-12-16 22:51:59,864 - robot - INFO - logger.py:73 - Real robot connected successfully
+2025-12-16 22:52:01,517 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && pwd
+2025-12-16 22:52:02,355 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && pwd, 返回码: 0
+2025-12-16 22:52:02,358 - robot - INFO - real_robot_adapter.py:276 - 命令输出: /home/khadas/BRUCE/BRUCE-OP...
+2025-12-16 22:52:02,361 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh
+2025-12-16 22:52:03,052 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh, 返回码: 0
+2025-12-16 22:52:03,055 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh
+2025-12-16 22:52:27,319 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh, 返回码: 0
+2025-12-16 22:52:27,321 - robot - INFO - real_robot_adapter.py:276 - 命令输出: ====== USB Low Latency Setup Finished ======
+
+====== Shared Memory Created ======
+
+====== BRUCE Gamepad Online ======
+
+Starting DXL control in 5 seconds...
+====== Dynamixel Motor Online ======
+
+Starting BEAR control in 5 seconds...
+====== BEAR Motor Online ======
+
+Initializing BRUCE in 5 seconds...
+====== BRUCE Initialized ======...
+2025-12-16 22:52:27,324 - robot - ERROR - real_robot_adapter.py:278 - 命令错误: [sudo] password for khadas: inits.sh: line 32: -m: command not found
+2025-12-16 22:52:27,328 - robot - INFO - logger.py:73 - Command: initialization - ✅ SUCCESS | {'success': True, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && pwd', 'output': '/home/khadas/BRUCE/BRUCE-OP', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:52:02.361520'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && chmod +x inits.sh', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:52:03.055638'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && timeout 300s bash inits.sh', 'output': '====== USB Low Latency Setup Finished ======\n\n====== Shared Memory Created ======\n\n====== BRUCE Gamepad Online ======\n\nStarting DXL control in 5 seconds...\n====== Dynamixel Motor Online ======\n\nStarting BEAR control in 5 seconds...\n====== BEAR Motor Online ======\n\nInitializing BRUCE in 5 seconds...\n====== BRUCE Initialized ======', 'error': '[sudo] password for khadas: inits.sh: line 32: -m: command not found', 'return_code': 0, 'timestamp': '2025-12-16T22:52:27.328424'}], 'test_case': 'initialization', 'timestamp': '2025-12-16T22:52:27.328424'}
+2025-12-16 22:55:09,383 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT
+2025-12-16 22:55:49,734 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT, 返回码: 0
+2025-12-16 22:55:49,735 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.ROBOT_MODEL.BRUCE_KINEMATICS_AOT
+2025-12-16 22:56:05,364 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.ROBOT_MODEL.BRUCE_KINEMATICS_AOT, 返回码: 0
+2025-12-16 22:56:05,365 - robot - INFO - real_robot_adapter.py:154 - 执行命令: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.STATE_ESTIMATION.BRUCE_ESTIMATION_AOT
+2025-12-16 22:56:20,515 - robot - INFO - real_robot_adapter.py:274 - 命令执行完成: cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.STATE_ESTIMATION.BRUCE_ESTIMATION_AOT, 返回码: 0
+2025-12-16 22:56:20,516 - robot - INFO - logger.py:73 - Command: compile_check - ✅ SUCCESS | {'success': True, 'results': [{'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.ROBOT_MODEL.BRUCE_DYNAMICS_AOT', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:55:49.735643'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.ROBOT_MODEL.BRUCE_KINEMATICS_AOT', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:56:05.365958'}, {'success': True, 'command': 'cd /home/khadas/BRUCE/BRUCE-OP && python3 -m Library.STATE_ESTIMATION.BRUCE_ESTIMATION_AOT', 'output': '', 'error': '', 'return_code': 0, 'timestamp': '2025-12-16T22:56:20.516004'}], 'test_case': 'compile_check', 'timestamp': '2025-12-16T22:56:20.516004'}
+2025-12-16 23:07:27,525 - robot - INFO - real_robot_adapter.py:126 - 实机已断开连接: BRUCE实机
+2025-12-16 23:07:27,528 - robot - INFO - logger.py:73 - Real robot disconnected

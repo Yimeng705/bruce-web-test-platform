@@ -1,0 +1,326 @@
+<!-- 文件: index.html 重新设计的三栏布局 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 BRUCE机器人测试平台</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body class="state-idle" data-mode="novice">
+    <div class="container">
+        <!-- 顶部状态栏 -->
+        <header class="status-header">
+            <div class="header-left">
+                <h1>🤖 BRUCE 机器人测试平台</h1>
+                <div class="mode-switch">
+                    <button class="mode-btn active" data-mode="novice">新手模式</button>
+                    <button class="mode-btn" data-mode="expert">专家模式</button>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="platform-status">
+                    <div class="status-indicator" id="status-real">
+                        <span class="status-dot offline"></span>
+                        <span>实机: 离线</span>
+                    </div>
+                    <div class="status-indicator" id="status-gazebo">
+                        <span class="status-dot offline"></span>
+                        <span>Gazebo: 离线</span>
+                    </div>
+                    <div class="connection-time" id="connection-time">--:--:--</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="system-status">
+                    <span class="current-test" id="current-test">准备就绪</span>
+                    <div class="test-progress" id="test-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 三栏主内容 -->
+        <main class="three-column-layout">
+            <!-- 左侧栏: 任务配置 -->
+            <div class="left-column" id="config-panel">
+                <div class="panel-section">
+                    <h3 class="section-title">
+                        <span class="section-icon">🎯</span>
+                        测试任务
+                        <span class="help-tooltip" title="选择预设测试或自定义配置">?</span>
+                    </h3>
+                    
+                    <!-- 新手模式 - 任务模板 -->
+                    <div class="task-templates" id="novice-templates">
+                        <div class="task-card selected" data-task="walking_test">
+                            <div class="task-icon">🚶</div>
+                            <div class="task-info">
+                                <h4>行走测试</h4>
+                                <p>测试机器人基础移动能力</p>
+                                <div class="task-stats">
+                                    <span>⏱ 约2分钟</span>
+                                    <span>🔄 10个步骤</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card" data-task="joint_test">
+                            <div class="task-icon">🦾</div>
+                            <div class="task-info">
+                                <h4>关节测试</h4>
+                                <p>验证所有关节运动范围</p>
+                                <div class="task-stats">
+                                    <span>⏱ 约1分钟</span>
+                                    <span>🔄 8个步骤</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-card" data-task="balance_test">
+                            <div class="task-icon">⚖️</div>
+                            <div class="task-info">
+                                <h4>平衡测试</h4>
+                                <p>检测姿态稳定性</p>
+                                <div class="task-stats">
+                                    <span>⏱ 约3分钟</span>
+                                    <span>🔄 15个步骤</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 专家模式 - 参数配置 -->
+                    <div class="expert-config" id="expert-config" style="display: none;">
+                        <div class="config-tabs">
+                            <button class="config-tab active" data-tab="motion">运动参数</button>
+                            <button class="config-tab" data-tab="sensors">传感器配置</button>
+                            <button class="config-tab" data-tab="advanced">高级设置</button>
+                        </div>
+                        <div class="config-content">
+                            <div class="config-group">
+                                <label>步态频率 (Hz)</label>
+                                <input type="range" min="0.5" max="5" step="0.1" value="2.0" id="gait-frequency">
+                                <span class="value-display" id="frequency-value">2.0</span>
+                            </div>
+                            <div class="config-group">
+                                <label>步幅长度 (cm)</label>
+                                <input type="range" min="10" max="50" step="1" value="25" id="stride-length">
+                                <span class="value-display" id="stride-value">25</span>
+                            </div>
+                            <div class="config-group">
+                                <label>平台选择</label>
+                                <div class="platform-checkboxes">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="platform-real-expert" checked>
+                                        <span class="checkmark"></span>
+                                        实机机器人
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="platform-gazebo-expert" checked>
+                                        <span class="checkmark"></span>
+                                        Gazebo仿真
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="json-editor">
+                                <button class="btn btn-small" onclick="loadConfig()">导入配置</button>
+                                <button class="btn btn-small" onclick="exportConfig()">导出配置</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 新手引导提示 -->
+                <div class="guidance-panel" id="guidance">
+                    <h4>💡 新手引导</h4>
+                    <p id="guidance-text">选择一个测试任务，然后点击"开始测试"按钮</p>
+                    <div class="guidance-steps">
+                        <span class="step active">1. 选择任务</span>
+                        <span class="step">2. 连接平台</span>
+                        <span class="step">3. 执行测试</span>
+                        <span class="step">4. 查看结果</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中间栏: 可视化 -->
+            <div class="center-column">
+                <!-- 3D模型视图 -->
+                <div class="visualization-section">
+                    <div class="viz-header">
+                        <h3>实时运动视图</h3>
+                        <div class="view-controls">
+                            <button class="view-btn" data-view="3d">3D视图</button>
+                            <button class="view-btn active" data-view="charts">数据图表</button>
+                        </div>
+                    </div>
+                    <div class="viz-content">
+                        <!-- 3D模型容器 -->
+                        <div id="robot-3d-view" style="display: none;">
+                            <canvas id="robot-canvas"></canvas>
+                            <div class="model-controls">
+                                <button onclick="rotateModel()">旋转</button>
+                                <button onclick="zoomIn()">放大</button>
+                                <button onclick="zoomOut()">缩小</button>
+                            </div>
+                        </div>
+                        
+                        <!-- 实时数据图表 -->
+                        <div id="data-charts">
+                            <div class="chart-container">
+                                <div id="joint-chart" style="height: 200px;"></div>
+                                <div class="chart-title">关节角度 (度)</div>
+                            </div>
+                            <div class="chart-container">
+                                <div id="imu-chart" style="height: 200px;"></div>
+                                <div class="chart-title">IMU数据</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 实时对比数据 -->
+                <div class="comparison-section">
+                    <h3>平台对比数据</h3>
+                    <div class="comparison-grid">
+                        <div class="metric-card">
+                            <div class="metric-title">成功率</div>
+                            <div class="metric-value" id="success-rate-real">--%</div>
+                            <div class="metric-value" id="success-rate-gazebo">--%</div>
+                            <div class="metric-label">实机 vs Gazebo</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">延迟</div>
+                            <div class="metric-value" id="latency-real">--ms</div>
+                            <div class="metric-value" id="latency-gazebo">--ms</div>
+                            <div class="metric-label">实机 vs Gazebo</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">稳定性</div>
+                            <div class="metric-value" id="stability-real">--%</div>
+                            <div class="metric-value" id="stability-gazebo">--%</div>
+                            <div class="metric-label">实机 vs Gazebo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧栏: 控制与结果 -->
+            <div class="right-column">
+                <!-- 控制面板 -->
+                <div class="control-section">
+                    <h3>控制中心</h3>
+                    <div class="control-grid">
+                        <button class="control-btn primary" onclick="connectAll()">
+                            <span class="btn-icon">🔗</span>
+                            连接所有平台
+                        </button>
+                        <button class="control-btn success" onclick="startTest()" id="start-btn">
+                            <span class="btn-icon">▶️</span>
+                            开始测试
+                        </button>
+                        <button class="control-btn warning" onclick="pauseTest()" id="pause-btn" disabled>
+                            <span class="btn-icon">⏸️</span>
+                            暂停
+                        </button>
+                        <button class="control-btn danger" onclick="stopTest()" id="stop-btn" disabled>
+                            <span class="btn-icon">⏹️</span>
+                            停止
+                        </button>
+                    </div>
+
+                    <!-- 快速配置 -->
+                    <div class="quick-config">
+                        <h4>快速配置</h4>
+                        <select class="config-select" id="config-preset">
+                            <option value="default">默认配置</option>
+                            <option value="high_speed">高速模式</option>
+                            <option value="stability">稳定性优先</option>
+                            <option value="custom">自定义</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 实时日志 -->
+                <div class="log-section">
+                    <div class="log-header">
+                        <h3>实时日志</h3>
+                        <div class="log-controls">
+                            <button class="log-btn" onclick="clearLogs()">清空</button>
+                            <button class="log-btn" onclick="toggleLogs()">暂停</button>
+                        </div>
+                    </div>
+                    <div class="log-container" id="log-container">
+                        <div class="log-entry info">
+                            <span class="log-time">10:00:00</span>
+                            <span class="log-message">系统初始化完成</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 结果预览 -->
+                <div class="results-section">
+                    <h3>测试结果</h3>
+                    <div class="result-preview" id="result-preview">
+                        <div class="result-placeholder">
+                            <div class="placeholder-icon">📊</div>
+                            <p>测试完成后将显示结果</p>
+                        </div>
+                    </div>
+                    <div class="result-actions">
+                        <button class="btn" onclick="exportReport()">
+                            <span class="btn-icon">📥</span>
+                            导出报告
+                        </button>
+                        <button class="btn" onclick="showDetails()">
+                            <span class="btn-icon">🔍</span>
+                            详细分析
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部状态信息 -->
+        <footer class="status-footer">
+            <div class="footer-left">
+                <span class="status-indicator">
+                    <span class="status-dot" id="global-status"></span>
+                    系统状态: <span id="system-status">空闲</span>
+                </span>
+                <span class="last-update" id="last-update">最后更新: --:--:--</span>
+            </div>
+            <div class="footer-right">
+                <button class="btn-small" onclick="showHelp()">帮助</button>
+                <button class="btn-small" onclick="resetSystem()">重置</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 模态框 - 详细结果 -->
+    <div class="modal" id="results-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>详细测试结果</h2>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="result-tabs">
+                    <button class="result-tab active" data-tab="summary">摘要</button>
+                    <button class="result-tab" data-tab="charts">图表</button>
+                    <button class="result-tab" data-tab="logs">日志</button>
+                    <button class="result-tab" data-tab="export">导出</button>
+                </div>
+                <div class="result-content">
+                    <div id="result-summary">内容加载中...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

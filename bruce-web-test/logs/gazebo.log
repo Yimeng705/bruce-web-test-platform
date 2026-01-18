@@ -1,0 +1,213 @@
+2025-12-15 16:38:53,079 - gazebo - ERROR - logger.py:81 - Connection error: cannot import name 'load_platform_config' from 'backend.main' (D:\Myhomework\j3\hc\bruce-web-test-platform\backend\main.py)
+2025-12-15 17:08:36,387 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: True)
+2025-12-15 17:08:36,389 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 17:08:36,390 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 17:08:37,394 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-15 17:42:18,159 - gazebo - ERROR - logger.py:81 - Connection error: 
+2025-12-15 17:45:29,094 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-15 17:45:31,552 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: True)
+2025-12-15 17:45:31,555 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 17:45:31,555 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 17:45:32,562 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-15 17:53:16,072 - gazebo - ERROR - logger.py:81 - Connection error: 
+2025-12-15 18:01:28,018 - gazebo - ERROR - logger.py:81 - Connection error: 
+2025-12-15 18:47:27,967 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: True)
+2025-12-15 18:47:27,969 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 18:47:27,970 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 18:47:28,976 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-15 18:48:02,813 - gazebo - ERROR - logger.py:81 - Connection error: 
+2025-12-15 18:48:07,693 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-15 21:51:35,854 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: True)
+2025-12-15 21:51:35,858 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 21:51:35,861 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 21:51:36,870 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-15 22:00:38,822 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-15 22:00:43,692 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-15 22:00:43,693 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:00:43,699 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-15 22:00:43,702 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-15 22:00:43,703 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:00:43,703 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 22:00:44,710 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-15 22:07:50,282 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-15 22:07:55,424 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-15 22:07:55,427 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:07:55,431 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-15 22:07:55,432 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-15 22:07:55,434 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:07:55,435 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 22:07:56,451 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-15 22:09:04,015 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-15 22:09:07,834 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-15 22:09:07,835 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:09:07,838 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-15 22:09:07,840 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-15 22:09:07,840 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:09:07,841 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 22:09:08,855 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-15 22:11:49,592 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-15 22:12:07,474 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-15 22:12:07,476 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:12:07,480 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-15 22:12:07,482 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-15 22:12:07,484 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:12:07,485 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 22:12:08,490 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-15 22:44:20,556 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-15 22:44:22,903 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-15 22:44:22,904 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:44:22,908 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-15 22:44:22,910 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-15 22:44:22,911 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-15 22:44:22,912 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-15 22:44:23,922 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 17:44:08,524 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 17:44:08,526 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 17:44:08,528 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 17:44:08,533 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 17:44:08,534 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 17:44:08,534 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 17:44:09,546 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 18:08:56,617 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 18:08:59,853 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 18:08:59,854 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:08:59,858 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 18:08:59,859 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 18:08:59,859 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:08:59,860 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 18:09:00,864 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 18:13:33,944 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 18:13:45,775 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 18:13:45,776 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:13:45,780 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 18:13:45,781 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 18:13:45,782 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:13:45,783 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 18:13:46,787 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 18:15:16,377 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 18:15:39,143 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 18:15:39,144 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:15:39,146 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 18:15:39,147 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 18:15:39,148 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:15:39,148 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 18:15:40,152 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 18:17:27,124 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 18:17:29,347 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 18:17:29,349 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:17:29,354 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 18:17:29,357 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 18:17:29,359 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:17:29,360 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 18:17:30,371 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 18:17:56,594 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 18:22:53,277 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 18:22:53,280 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:22:53,285 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 18:22:53,287 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 18:22:53,287 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:22:53,289 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 18:22:54,298 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 18:32:20,480 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 18:32:21,784 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 18:32:21,786 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:32:21,791 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 18:32:21,794 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 18:32:21,795 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:32:21,797 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 18:32:22,807 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 18:38:38,605 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 18:38:40,139 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 18:38:40,141 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:38:40,146 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 18:38:40,147 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 18:38:40,148 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 18:38:40,149 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 18:38:41,161 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 21:17:14,540 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 21:17:14,542 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:17:14,545 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 21:17:14,545 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 21:17:14,546 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:17:14,546 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 21:17:15,560 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 21:22:11,595 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 21:22:13,732 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 21:22:13,735 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:22:13,738 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 21:22:13,741 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 21:22:13,742 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:22:13,743 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 21:22:14,757 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 21:26:06,568 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 21:26:08,626 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 21:26:08,627 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:26:08,630 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 21:26:08,631 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 21:26:08,631 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:26:08,633 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 21:26:09,636 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 21:29:13,836 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 21:29:16,218 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 21:29:16,221 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:29:16,224 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 21:29:16,225 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 21:29:16,225 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:29:16,226 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 21:29:17,236 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 21:30:56,496 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 21:31:06,173 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 21:31:06,175 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:31:06,179 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 21:31:06,180 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 21:31:06,181 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:31:06,182 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 21:31:07,186 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 21:46:06,062 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 21:46:07,659 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 21:46:07,661 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:46:07,666 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 21:46:07,668 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 21:46:07,670 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:46:07,670 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 21:46:08,681 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 21:47:04,874 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 21:47:10,190 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 21:47:10,192 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:47:10,198 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 21:47:10,200 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 21:47:10,202 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 21:47:10,204 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 21:47:11,213 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 22:13:55,778 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 22:13:57,697 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 22:13:57,698 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 22:13:57,700 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 22:13:57,701 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 22:13:57,701 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 22:13:57,701 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 22:13:58,717 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 22:34:05,243 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 22:34:07,387 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 22:34:07,389 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 22:34:07,395 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 22:34:07,397 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 22:34:07,398 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 22:34:07,399 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 22:34:08,408 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 22:51:28,693 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 22:51:44,301 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 22:51:44,303 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 22:51:44,308 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 22:51:44,310 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 22:51:44,311 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 22:51:44,312 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 22:51:45,323 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
+2025-12-16 22:51:47,210 - gazebo - INFO - gazebo_adapter.py:105 - Gazebo已断开连接: Gazebo仿真
+2025-12-16 22:51:50,444 - gazebo - INFO - gazebo_adapter.py:26 - 初始化Gazebo适配器: Gazebo仿真 (模拟模式: False)
+2025-12-16 22:51:50,446 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 22:51:50,449 - gazebo - ERROR - gazebo_adapter.py:73 - 检查Gazebo安装失败: [WinError 2] 系统找不到指定的文件。
+2025-12-16 22:51:50,450 - gazebo - WARNING - gazebo_adapter.py:74 - 切换到模拟模式
+2025-12-16 22:51:50,451 - gazebo - INFO - gazebo_adapter.py:31 - 尝试连接Gazebo: Gazebo仿真
+2025-12-16 22:51:50,452 - gazebo - INFO - gazebo_adapter.py:40 - 使用模拟模式连接
+2025-12-16 22:51:51,465 - gazebo - INFO - gazebo_adapter.py:44 - Gazebo模拟连接成功: Gazebo仿真
